@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PiattoOrdinato.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">entity</a> &gt; <span class="el_source">PiattoOrdinato.java</span></div><h1>PiattoOrdinato.java</h1><pre class="source lang-java linenums">package entity;
+
+import java.io.Serializable;
+
+/**
+ * Rappresenta un piatto ordinato contenuto in una comanda
+ */
+public class PiattoOrdinato implements Serializable {
+    private Long id;
+    private Piatto piatto;
+    private Boolean stato;
+    private String data;
+    private String note;
+    private Integer quantita;
+    private int comanda;
+
+    /**
+     * Crea un piatto ordinato vuoto
+     */
+<span class="fc" id="L20">    public PiattoOrdinato() {</span>
+<span class="fc" id="L21">    }</span>
+
+    /**
+     * Crea un piatto ordinato inizializzato con i valori passati come parametro
+     * @param id id del piatto ordinato
+     * @param piatto piatto del menu che � stato ordinato
+     * @param stato 0 se il piatto ordinato � in fase di preparazione, 1 se � pronto
+     * @param data data di richiesta del piatto
+     * @param note note eventuali per la preparazione del piatto
+     * @param comanda id della comanda
+     */
+<span class="fc" id="L32">    public PiattoOrdinato(Long id, Piatto piatto, Boolean stato, String data, String note, int comanda) {</span>
+<span class="fc" id="L33">        this.id = id;</span>
+<span class="fc" id="L34">        this.piatto = piatto;</span>
+<span class="fc" id="L35">        this.stato = stato;</span>
+<span class="fc" id="L36">        this.data = data;</span>
+<span class="fc" id="L37">        this.note = note;</span>
+<span class="fc" id="L38">        this.quantita = 1;</span>
+<span class="fc" id="L39">        this.comanda = comanda;</span>
+<span class="fc" id="L40">    }</span>
+
+    /**
+     * Crea un piatto ordinato inizializzato con i valori passati come parametro
+     * @param piatto piatto del menu che � stato ordinato
+     * @param stato 0 se il piatto ordinato � in fase di preparazione, 1 se � pronto
+     * @param data data di richiesta del piatto
+     * @param note note eventuali per la preparazione del piatto
+     * @param comanda id della comanda
+     */
+<span class="fc" id="L50">    public PiattoOrdinato(Piatto piatto, Boolean stato, String data, String note, int comanda) {</span>
+<span class="fc" id="L51">        this.piatto = piatto;</span>
+<span class="fc" id="L52">        this.stato = stato;</span>
+<span class="fc" id="L53">        this.data = data;</span>
+<span class="fc" id="L54">        this.note = note;</span>
+<span class="fc" id="L55">        this.quantita = 1;</span>
+<span class="fc" id="L56">        this.comanda = comanda;</span>
+<span class="fc" id="L57">    }</span>
+    
+    /**
+     * Crea un piatto ordinato inizializzato con i valori passati come parametro
+     * @param piatto piatto del menu che � stato ordinato
+     * @param stato 0 se il piatto ordinato � in fase di preparazione, 1 se � pronto
+     * @param data data di richiesta del piatto
+     * @param note note eventuali per la preparazione del piatto
+     */
+<span class="fc" id="L66">    public PiattoOrdinato(Piatto piatto, Boolean stato, String data, String note) {</span>
+<span class="fc" id="L67">        this.piatto = piatto;</span>
+<span class="fc" id="L68">        this.stato = stato;</span>
+<span class="fc" id="L69">        this.data = data;</span>
+<span class="fc" id="L70">        this.note = note;</span>
+<span class="fc" id="L71">        this.quantita = 1;</span>
+<span class="fc" id="L72">    }</span>
+    
+    /**
+     * Restituisce l'id della comanda
+     * @return id della comanda
+     */
+    public int getComanda() {
+<span class="fc" id="L79">        return this.comanda;</span>
+    }
+    
+    /**
+     * Cambia l'id della comanda
+     * @param comanda id della comanda
+     */
+    public void setComanda(int comanda) {
+<span class="fc" id="L87">        this.comanda = comanda;</span>
+<span class="fc" id="L88">    }</span>
+
+    /**
+     * Restituisce l'id del piatto
+     * @return id
+     */
+    public Long getId() {
+<span class="fc" id="L95">        return id;</span>
+    }
+
+    /**
+     * Setta un nuovo id al piatto
+     * @param id nuovo id
+     */
+    public void setId(Long id) {
+<span class="fc" id="L103">        this.id = id;</span>
+<span class="fc" id="L104">    }</span>
+
+    /**
+     * Restituisce il piatto del menu ordinato
+     * @return piatto del menu ordinato
+     */
+    public Piatto getPiatto() {
+<span class="fc" id="L111">        return piatto;</span>
+    }
+
+    /**
+     * Setta un nuovo piatto del menu ordinato
+     * @param piatto piatto del menu ordinato
+     */
+    public void setPiatto(Piatto piatto) {
+<span class="fc" id="L119">        this.piatto = piatto;</span>
+<span class="fc" id="L120">    }</span>
+
+    /**
+     * Ritorna lo stato del piatto ordinato
+     * @return 0 se il piatto ordinato � in fase di preparazione, 1 se � pronto
+     */
+    public Boolean getStato() {
+<span class="fc" id="L127">        return stato;</span>
+    }
+
+    /**
+     * Setta un nuovo stato al piatto ordinato
+     * @param stato 0 se il piatto ordinato � in fase di preparazione, 1 se � pronto
+     */
+    public void setStato(Boolean stato) {
+<span class="fc" id="L135">        this.stato = stato;</span>
+<span class="fc" id="L136">    }</span>
+
+    /**
+     * Ritorna la data di richiesta del piatto ordinato
+     * @return data del piatto ordinato
+     */
+    public String getData() {
+<span class="fc" id="L143">        return data;</span>
+    }
+
+    /**
+     * Setta una nuova data di richiesta al piatto ordinato
+     * @param data nuova data
+     */
+    public void setData(String data) {
+<span class="fc" id="L151">        this.data = data;</span>
+<span class="fc" id="L152">    }</span>
+
+    /**
+     * Ritorna le note relative al piatto ordinato
+     * @return note del piatto ordinato
+     */
+    public String getNote() {
+<span class="fc" id="L159">        return note;</span>
+    }
+
+    /**
+     * Setta delle note al piatto ordinato
+     * @param note nuove note
+     */
+    public void setNote(String note) {
+<span class="fc" id="L167">        this.note = note;</span>
+<span class="fc" id="L168">    }</span>
+
+    /**
+     * Ritorna quanti piatti dello stesso tipo sono stati ordinati
+     * @return quantit�
+     */
+    public int getQuantita() {
+<span class="fc" id="L175">        return quantita;</span>
+    }
+
+    /**
+     * Setta una nuova quantita di piatti ordinati
+     * @param quantita nuova quantita
+     */
+    public void setQuantita(int quantita) {
+<span class="fc" id="L183">        this.quantita = quantita;</span>
+<span class="fc" id="L184">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PiattoOrdinatoQuery.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">query</a> &gt; <span class="el_source">PiattoOrdinatoQuery.java</span></div><h1>PiattoOrdinatoQuery.java</h1><pre class="source lang-java linenums">package query;
+
+import entity.Comanda;
+import entity.Piatto;
+import entity.PiattoOrdinato;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * Si occupa di gestire la memorizzazione e la ricerca dei piatti ordinati all'interno del database
+ * @author Syrenne
+ */
+<span class="fc" id="L19">public class PiattoOrdinatoQuery implements PiattoOrdinatoQueryInterface {</span>
+    private Connection connection;
+<span class="fc" id="L21">    private PiattoQuery piattoQuery = new PiattoQuery();</span>
+    
+    /**
+     * Inserisce un nuovo piatto ordinato all'interno del database
+     * @param piattoOrdinato piatto ordinato da inserire
+     * @param idComanda identificativo della comanda relativa al piatto ordinato
+     * @return piatto ordinato memorizzato
+     */
+    @Override
+    public PiattoOrdinato insert(PiattoOrdinato piattoOrdinato, int idComanda) {
+        try {  
+<span class="fc" id="L32">            connection = DriverManagerConnectionPool.getConnection();</span>
+         
+            /*PiattoQuery piattoQuery = new PiattoQuery();
+            piattoQuery.insert(piattoOrdinato.getPiatto());*/
+
+<span class="fc" id="L37">            String query = &quot;INSERT INTO PiattoOrdinato (id_piatto, comanda, stato, data, quantita, note)&quot; + &quot; values (?, ?, ?, ?, ?, ?)&quot;;</span>
+
+<span class="fc" id="L39">            PreparedStatement preparedStmt = connection.prepareStatement(query);</span>
+<span class="fc" id="L40">            preparedStmt.setLong(1, piattoOrdinato.getPiatto().getId());</span>
+<span class="fc" id="L41">            preparedStmt.setInt(2, idComanda);</span>
+<span class="fc" id="L42">            preparedStmt.setBoolean(3, piattoOrdinato.getStato());</span>
+<span class="fc" id="L43">            preparedStmt.setString(4, piattoOrdinato.getData());</span>
+<span class="fc" id="L44">            preparedStmt.setInt(5, piattoOrdinato.getQuantita());</span>
+<span class="fc" id="L45">            preparedStmt.setString(6, piattoOrdinato.getNote());</span>
+            
+<span class="fc" id="L47">            preparedStmt.execute();</span>
+<span class="nc" id="L48">        } catch (SQLException ex) {</span>
+<span class="nc" id="L49">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L51">            close();</span>
+<span class="pc" id="L52">        }</span>
+        
+<span class="fc" id="L54">        return piattoOrdinato;</span>
+    }
+    
+    /**
+     * Restituisce il piatto ordinato con l'id corrispondente
+     * @param id id del piatto ordinato da cercare
+     * @return piatto ordinato con l'id passato come parametro se esiste, null altrimenti
+     */
+    @Override
+    public PiattoOrdinato findById(int id) {
+<span class="nc" id="L64">        PiattoOrdinato piattoOrdinato = null;</span>
+        
+        try {  
+<span class="nc" id="L67">            connection = DriverManagerConnectionPool.getConnection();</span>
+
+<span class="nc" id="L69">            String query = &quot;SELECT * FROM PiattoOrdinato AS po WHERE po.id = ?;&quot;;</span>
+            
+<span class="nc" id="L71">            PreparedStatement preparedStmt = connection.prepareStatement(query);</span>
+<span class="nc" id="L72">            preparedStmt.setLong(1, id);</span>
+            
+<span class="nc" id="L74">            preparedStmt.execute();            </span>
+<span class="nc" id="L75">            ResultSet rs = preparedStmt.executeQuery();</span>
+            
+<span class="nc bnc" id="L77" title="All 2 branches missed.">            if (rs.next()) {</span>
+<span class="nc" id="L78">                piattoOrdinato = new PiattoOrdinato();</span>
+<span class="nc" id="L79">                piattoOrdinato.setId(Long.parseLong(rs.getInt(&quot;id&quot;) + &quot;&quot;));</span>
+                
+<span class="nc" id="L81">                Piatto piatto = new PiattoQuery().findById(Integer.parseInt(rs.getInt(&quot;id_piatto&quot;) + &quot;&quot;));</span>
+<span class="nc" id="L82">                piattoOrdinato.setPiatto(piatto);</span>
+                
+<span class="nc" id="L84">                piattoOrdinato.setStato(rs.getBoolean(&quot;stato&quot;));</span>
+<span class="nc" id="L85">                piattoOrdinato.setData(rs.getString(&quot;data&quot;));</span>
+<span class="nc" id="L86">                piattoOrdinato.setNote(rs.getString(&quot;note&quot;));</span>
+<span class="nc" id="L87">                piattoOrdinato.setQuantita(Integer.parseInt(rs.getInt(&quot;quantita&quot;) + &quot;&quot;));</span>
+<span class="nc" id="L88">                piattoOrdinato.setComanda(rs.getInt(&quot;comanda&quot;));</span>
+            }
+<span class="nc" id="L90">        } catch (SQLException ex) {</span>
+<span class="nc" id="L91">            ex.printStackTrace();</span>
+        } finally {
+<span class="nc" id="L93">            close();</span>
+<span class="nc" id="L94">        }</span>
+        
+<span class="nc" id="L96">        return piattoOrdinato;</span>
+    }
+
+    /**
+     * Aggiorna il piatto ordinato passato come parametro
+     * @param p piatto ordinato da aggiornare
+     * @param id_comanda id della comanda del piatto ordinato
+     * @return piatto ordinato aggiornato
+     */
+    @Override
+    public PiattoOrdinato update(PiattoOrdinato p, long id_comanda) {
+        try {  
+<span class="fc" id="L108">            connection = DriverManagerConnectionPool.getConnection();</span>
+            
+<span class="fc" id="L110">            String query = &quot;UPDATE smartrestaurant.piattoordinato as p SET p.comanda = ?, p.stato = ?, p.data = ?, p.quantita = ?, p.note = ? where p.id = ?&quot;;</span>
+
+<span class="fc" id="L112">            PreparedStatement preparedStmt = connection.prepareStatement(query);</span>
+<span class="fc" id="L113">            preparedStmt.setLong(1, id_comanda);</span>
+<span class="fc" id="L114">            preparedStmt.setBoolean(2, p.getStato());</span>
+<span class="fc" id="L115">            preparedStmt.setString(3, p.getData());</span>
+<span class="fc" id="L116">            preparedStmt.setInt(4, p.getQuantita());</span>
+<span class="fc" id="L117">            preparedStmt.setString(5, p.getNote());</span>
+<span class="fc" id="L118">            preparedStmt.setLong(6, p.getId());</span>
+            
+<span class="fc" id="L120">            preparedStmt.execute();</span>
+<span class="nc" id="L121">        } catch (SQLException ex) {</span>
+<span class="nc" id="L122">            System.out.println(ex.getMessage());</span>
+<span class="nc" id="L123">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L125">            close();</span>
+<span class="pc" id="L126">        }</span>
+        
+<span class="fc" id="L128">        return p;</span>
+    }
+
+    /**
+     * Rimuove il piatto ordinato passato come parametro
+     * @param id piatto ordinato da rimuovere
+     */
+    @Override
+    public void delete(PiattoOrdinato p) {
+        try {
+<span class="fc" id="L138">            connection = DriverManagerConnectionPool.getConnection();</span>
+            
+<span class="fc" id="L140">            String query = &quot;DELETE FROM piattoordinato WHERE piattoordinato.id = ?;&quot;;</span>
+            
+<span class="fc" id="L142">            PreparedStatement statement = null;</span>
+<span class="fc" id="L143">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L144">            statement.setLong(1, p.getId());</span>
+            
+<span class="fc" id="L146">            System.out.println(&quot;Delete code: &quot; + statement.executeUpdate());</span>
+            
+<span class="nc" id="L148">        } catch (SQLException ex) {</span>
+<span class="nc" id="L149">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L151">            close();</span>
+<span class="pc" id="L152">        }</span>
+<span class="fc" id="L153">    }</span>
+
+    /**
+     * Restituisce tutti i piatti ordinati relativi ad una comanda memorizzati nel database
+     * @param comanda comanda relativa ai piatti ordinati da cercare
+     * @return piatti ordinati relativi alla comanda
+     */
+    @Override
+    public List&lt;PiattoOrdinato&gt; findByComanda(Comanda comanda) {
+<span class="fc" id="L162">        ArrayList&lt;PiattoOrdinato&gt; piattiOrdinati = new ArrayList&lt;&gt;();</span>
+        PiattoOrdinato p;
+        
+<span class="pc bpc" id="L165" title="1 of 2 branches missed.">        if(comanda != null)</span>
+            try {
+<span class="fc" id="L167">                connection = DriverManagerConnectionPool.getConnection();</span>
+<span class="fc" id="L168">                String query = &quot;SELECT * FROM PiattoOrdinato AS po JOIN Comanda AS c JOIN Piatto AS p WHERE po.comanda = c.id AND c.id = ? AND po.id_piatto = p.id;&quot;;</span>
+
+<span class="fc" id="L170">                PreparedStatement statement = null;</span>
+<span class="fc" id="L171">                statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L172">                statement.setInt(1, comanda.getId());</span>
+
+<span class="fc" id="L174">                ResultSet rs = statement.executeQuery();</span>
+
+<span class="fc bfc" id="L176" title="All 2 branches covered.">                while(rs.next()) {</span>
+<span class="fc" id="L177">                    p = new PiattoOrdinato();</span>
+<span class="fc" id="L178">                    p.setId(rs.getLong(&quot;id&quot;));</span>
+
+<span class="fc" id="L180">                    Piatto piatto = new Piatto();</span>
+<span class="fc" id="L181">                    piatto.setId(rs.getLong(&quot;id_piatto&quot;));</span>
+<span class="fc" id="L182">                    piatto.setNome(rs.getString(&quot;nome&quot;));</span>
+<span class="fc" id="L183">                    piatto.setCategoria(rs.getString(&quot;categoria&quot;));</span>
+<span class="fc" id="L184">                    piatto.setIngredienti(rs.getString(&quot;ingredienti&quot;));</span>
+<span class="fc" id="L185">                    piatto.setDescrizione(rs.getString(&quot;descrizione&quot;));</span>
+<span class="fc" id="L186">                    piatto.setPrezzo(rs.getFloat(&quot;prezzo&quot;));</span>
+<span class="fc" id="L187">                    piatto.setFoto(rs.getString(&quot;foto&quot;));</span>
+
+<span class="fc" id="L189">                    p.setPiatto(piatto);</span>
+<span class="fc" id="L190">                    p.setStato(rs.getBoolean(&quot;stato&quot;));</span>
+<span class="fc" id="L191">                    p.setData(rs.getString(&quot;data&quot;));</span>
+<span class="fc" id="L192">                    p.setNote(rs.getString(&quot;note&quot;));</span>
+<span class="fc" id="L193">                    p.setQuantita(rs.getInt(&quot;quantita&quot;));</span>
+
+<span class="fc" id="L195">                    piattiOrdinati.add(p);</span>
+<span class="fc" id="L196">                }</span>
+<span class="nc" id="L197">            } catch (SQLException ex) {</span>
+<span class="nc" id="L198">                ex.printStackTrace();</span>
+            } finally {
+<span class="pc" id="L200">                close();</span>
+<span class="pc" id="L201">            }</span>
+        
+<span class="fc" id="L203">        return piattiOrdinati;</span>
+    }
+    
+    /**
+     * Chiude la connessione
+     */
+    @Override
+    public void close() {
+        try {
+<span class="fc" id="L212">            connection.close();</span>
+<span class="nc" id="L213">        } catch (SQLException ex) {</span>
+<span class="nc" id="L214">            Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+        } finally {
+<span class="nc" id="L216">            try {</span>
+<span class="pc" id="L217">                DriverManagerConnectionPool.releaseConnection(connection);</span>
+<span class="nc" id="L218">            } catch (SQLException ex) {</span>
+<span class="nc" id="L219">                Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc" id="L220">            }</span>
+<span class="nc" id="L221">        }</span>
+<span class="fc" id="L222">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

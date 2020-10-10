@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Tavolo.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">entity</a> &gt; <span class="el_source">Tavolo.java</span></div><h1>Tavolo.java</h1><pre class="source lang-java linenums">package entity;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Objects;
+
+/**
+ * Rappresenta un tavolo della sala
+ */
+public class Tavolo implements Serializable {
+    private String username;
+    private String password;
+    private String nome;
+    private Integer posti;
+    private Boolean libero;
+    private Boolean vuolePagare;
+    private Comanda comanda;
+    private ArrayList&lt;PiattoOrdinato&gt; carrello;
+
+    /**
+     * Crea un tavolo vuoto
+     */
+<span class="fc" id="L23">    public Tavolo() {</span>
+<span class="fc" id="L24">        this.comanda = new Comanda();</span>
+<span class="fc" id="L25">        this.carrello = new ArrayList&lt;PiattoOrdinato&gt;();</span>
+<span class="fc" id="L26">    }</span>
+
+    /**
+     * Crea un tavolo inizializzato con i parametri passati
+     * @param username username del tavolo
+     * @param password password per accedere al tavolo
+     * @param nome nome del tavolo
+     * @param posti numero di posti del tavolo
+     * @param libero 1 se il tavolo � libero, 0 se � occupato
+     * @param vuolePagare 1 se il tavolo vuole pagare, 0 altrimenti
+     */
+<span class="fc" id="L37">    public Tavolo(String username, String password, String nome, Integer posti, Boolean libero, Boolean vuolePagare) {</span>
+<span class="fc" id="L38">        this.username = username;</span>
+<span class="fc" id="L39">        this.password = password;</span>
+<span class="fc" id="L40">        this.nome = nome;</span>
+<span class="fc" id="L41">        this.posti = posti;</span>
+<span class="fc" id="L42">        this.libero = libero;</span>
+<span class="fc" id="L43">        this.vuolePagare = vuolePagare;</span>
+<span class="fc" id="L44">        this.comanda = new Comanda();</span>
+<span class="fc" id="L45">        this.carrello = new ArrayList&lt;PiattoOrdinato&gt;();</span>
+<span class="fc" id="L46">    }</span>
+
+    /**
+     * Ritorna l'username del tavolo
+     * @return username
+     */
+    public String getUsername() {
+<span class="fc" id="L53">        return username;</span>
+    }
+
+    /**
+     * Setta una nuova username al tavolo
+     * @param username nuova username
+     */
+    public void setUsername(String username) {
+<span class="fc" id="L61">        this.username = username;</span>
+<span class="fc" id="L62">    }</span>
+
+    /**
+     * Ritorna la password del tavolo
+     * @return password
+     */
+    public String getPassword() {
+<span class="fc" id="L69">        return password;</span>
+    }
+
+    /**
+     * Setta una nuova password al tavolo
+     * @param password nuova password
+     */
+    public void setPassword(String password) {
+<span class="fc" id="L77">        this.password = password;</span>
+<span class="fc" id="L78">    }</span>
+
+    /**
+     * Ritorna il nome del tavolo
+     * @return nome
+     */
+    public String getNome() {
+<span class="fc" id="L85">        return nome;</span>
+    }
+
+    /**
+     * Setta un nuovo nome al tavolo
+     * @param nome nuovo nome
+     */
+    public void setNome(String nome) {
+<span class="fc" id="L93">        this.nome = nome;</span>
+<span class="fc" id="L94">    }</span>
+
+    /**
+     * Ritorna il numero di posti del tavolo
+     * @return numero di posti
+     */
+    public Integer getPosti() {
+<span class="fc" id="L101">        return posti;</span>
+    }
+
+    /**
+     * Setta un nuovo numero di posti al tavolo
+     * @param posti nuovo numero di posti
+     */
+    public void setPosti(Integer posti) {
+<span class="fc" id="L109">        this.posti = posti;</span>
+<span class="fc" id="L110">    }</span>
+
+    /**
+     * Ritorna lo stato del tavolo
+     * @return 1 se � libero, 0 se � occupato
+     */
+    public Boolean isLibero() {
+<span class="fc" id="L117">        return libero;</span>
+    }
+
+    /**
+     * Setta un nuovo stato al tavolo
+     * @param libero 1 se � libero, 0 se � occupato
+     */
+    public void setLibero(Boolean libero) {
+<span class="fc" id="L125">        this.libero = libero;</span>
+<span class="fc" id="L126">    }</span>
+
+    /**
+     * Ritorna un booleano indicante se il tavolo vuole pagare
+     * @return 1 se vuole pagare, 0 altrimenti
+     */
+    public boolean vuolePagare() {
+<span class="fc" id="L133">        return this.vuolePagare;</span>
+    }
+
+    /**
+     * Setta un booleano per indicare se il tavolo vuole pagare
+     * @param v 1 se vuole pagare, 0 altrimenti
+     */
+    public void setVuolePagare(boolean v) {
+<span class="fc" id="L141">        this.vuolePagare = v;</span>
+<span class="fc" id="L142">    }</span>
+
+    /**
+     * Ritorna la comanda del tavolo
+     * @return comanda
+     */
+    public Comanda getComanda() {
+<span class="fc" id="L149">        return comanda;</span>
+    }
+
+    /**
+     * Setta una nuova comanda per il tavolo
+     * @param comanda nuova comanda
+     */
+    public void setComanda(Comanda comanda) {
+<span class="fc" id="L157">        this.comanda = comanda;</span>
+<span class="fc" id="L158">    }</span>
+
+    /**
+     * Ritorna tutti i piatti ordinati della comanda
+     * @return piatti ordinati dal tavolo
+     */
+    public ArrayList&lt;PiattoOrdinato&gt; getCarrello() {
+<span class="fc" id="L165">        return this.carrello;</span>
+    }
+
+    /**
+     * Aggiunge un piatto ordinato alla comanda del tavolo
+     * @param piattoOrdinato piatto ordinato da aggiungere
+     */
+    public void addToCart(PiattoOrdinato piattoOrdinato) {
+<span class="fc" id="L173">        this.carrello.add(piattoOrdinato);</span>
+<span class="fc" id="L174">    }</span>
+
+    public void spostaDalCarrelloAllaComanda() {
+<span class="fc" id="L177">        this.comanda.getPiattiOrdinati().addAll(this.carrello);</span>
+<span class="fc" id="L178">        this.carrello = new ArrayList&lt;PiattoOrdinato&gt;();</span>
+<span class="fc" id="L179">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L183">        return &quot;Tavolo{&quot; +</span>
+                &quot;username='&quot; + username + '\'' +
+                &quot;, password='&quot; + password + '\'' +
+                &quot;, name='&quot; + nome + '\'' +
+                &quot;, posti=&quot; + posti +
+                &quot;, libero=&quot; + libero +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="fc bfc" id="L194" title="All 2 branches covered.">        if (this == obj) {</span>
+<span class="fc" id="L195">            return true;</span>
+        }
+<span class="fc bfc" id="L197" title="All 2 branches covered.">        if (obj == null) {</span>
+<span class="fc" id="L198">            return false;</span>
+        }
+<span class="fc bfc" id="L200" title="All 2 branches covered.">        if (getClass() != obj.getClass()) {</span>
+<span class="fc" id="L201">            return false;</span>
+        }
+<span class="fc" id="L203">        final Tavolo other = (Tavolo) obj;</span>
+<span class="fc bfc" id="L204" title="All 2 branches covered.">        if (!Objects.equals(this.username, other.username)) {</span>
+<span class="fc" id="L205">            return false;</span>
+        }
+<span class="fc bfc" id="L207" title="All 2 branches covered.">        if (!Objects.equals(this.nome, other.nome)) {</span>
+<span class="fc" id="L208">            return false;</span>
+        }
+<span class="fc bfc" id="L210" title="All 2 branches covered.">        if (!Objects.equals(this.posti, other.posti)) {</span>
+<span class="fc" id="L211">            return false;</span>
+        }
+<span class="fc bfc" id="L213" title="All 2 branches covered.">        if (!Objects.equals(this.libero, other.libero)) {</span>
+<span class="fc" id="L214">            return false;</span>
+        }
+<span class="fc bfc" id="L216" title="All 2 branches covered.">        if (!Objects.equals(this.vuolePagare, other.vuolePagare)) {</span>
+<span class="fc" id="L217">            return false;</span>
+        }
+        
+<span class="fc" id="L220">        return true;</span>
+    }
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

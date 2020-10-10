@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>NotificaQuery.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">query</a> &gt; <span class="el_source">NotificaQuery.java</span></div><h1>NotificaQuery.java</h1><pre class="source lang-java linenums">package query;
+
+import entity.Notifica;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/***
+ * Si occupa del recupero ed inserimento delle informazioni relative alle notifiche
+ * @author Syrenne
+ */
+<span class="fc" id="L17">public class NotificaQuery implements NotificaQueryInterface {</span>
+    private Connection connection;
+    
+    /**
+     * Inserisce una nuova notifica all'interno del database
+     * @param notifica notifica da inserire
+     * @return notifica inserita
+     */
+    @Override
+    public Notifica insert(Notifica notifica) {
+        try {
+<span class="fc" id="L28">            connection = DriverManagerConnectionPool.getConnection();</span>
+<span class="fc" id="L29">            String query = &quot;INSERT INTO smartrestaurant.Notifica(username, categoria, mittente, testo, letta, data) VALUES (?, ?, ?, ?, ?, ?);&quot;;</span>
+            
+<span class="fc" id="L31">            PreparedStatement statement = null;</span>
+<span class="fc" id="L32">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L33">            statement.setString(1, notifica.getDestinatario());</span>
+<span class="fc" id="L34">            statement.setString(2, notifica.getCategoria());</span>
+<span class="fc" id="L35">            statement.setString(3, notifica.getMittente());</span>
+<span class="fc" id="L36">            statement.setString(4, notifica.getTesto());</span>
+<span class="fc" id="L37">            statement.setBoolean(5, notifica.isLetta());</span>
+<span class="fc" id="L38">            statement.setString(6, notifica.getData());</span>
+            
+<span class="fc" id="L40">            statement.execute();</span>
+<span class="nc" id="L41">        } catch (SQLException ex) {</span>
+<span class="nc" id="L42">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L44">            close();</span>
+<span class="pc" id="L45">        }</span>
+        
+<span class="fc" id="L47">        return notifica;</span>
+    }
+
+    /**
+     * Aggiorna una notifica con le nuove informazioni passate come parametro
+     * @param notifica contiene le nuove informazioni da memorizzare e l'id per ricercare la notifica da aggiornare
+     * @return notifica aggiornata
+     */
+    @Override
+    public Notifica update(Notifica notifica) {
+        try {
+<span class="fc" id="L58">            connection = DriverManagerConnectionPool.getConnection();</span>
+<span class="fc" id="L59">            String query = &quot;UPDATE Notifica SET Notifica.username = ?, Notifica.categoria = ?, Notifica.mittente = ?, Notifica.testo = ?, Notifica.letta = ? WHERE Notifica.id = ?&quot;;</span>
+            
+<span class="fc" id="L61">            PreparedStatement statement = null;</span>
+<span class="fc" id="L62">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L63">            statement.setString(1, notifica.getDestinatario());</span>
+<span class="fc" id="L64">            statement.setString(2, notifica.getCategoria());</span>
+<span class="fc" id="L65">            statement.setString(3, notifica.getMittente());</span>
+<span class="fc" id="L66">            statement.setString(4, notifica.getTesto());</span>
+<span class="fc" id="L67">            statement.setBoolean(5, notifica.isLetta());</span>
+<span class="fc" id="L68">            statement.setLong(6, notifica.getId());</span>
+            
+<span class="fc" id="L70">            statement.executeUpdate();</span>
+<span class="nc" id="L71">        } catch (SQLException ex) {</span>
+<span class="nc" id="L72">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L74">            close();</span>
+<span class="pc" id="L75">        }</span>
+        
+<span class="fc" id="L77">        return notifica;</span>
+    }
+    
+    /**
+     * Restituisce la notifica con id uguale a quello della notifica passata come parametro
+     * @param notifica notifica con lo stesso id della notifica da cercare
+     * @return notifica, se esiste. null altrimenti
+     */
+    @Override
+    public Notifica findById(Notifica notifica) {
+<span class="fc" id="L87">        Notifica new_notifica = null;</span>
+        
+        try {
+<span class="fc" id="L90">            connection = DriverManagerConnectionPool.getConnection();</span>
+<span class="fc" id="L91">            String query = &quot;SELECT * FROM Notifica AS n WHERE n.id = ?&quot;;</span>
+            
+<span class="fc" id="L93">            PreparedStatement statement = null;</span>
+<span class="fc" id="L94">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L95">            statement.setLong(1, notifica.getId());</span>
+<span class="fc" id="L96">            ResultSet rs = statement.executeQuery();</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">            if (rs.next())</span>
+<span class="fc" id="L98">                new_notifica = new Notifica(rs.getInt(&quot;id&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;categoria&quot;), rs.getString(&quot;mittente&quot;), rs.getString(&quot;testo&quot;), rs.getBoolean(&quot;letta&quot;), rs.getString(&quot;data&quot;));            </span>
+<span class="nc" id="L99">        } catch (SQLException ex) {</span>
+<span class="nc" id="L100">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L102">            close();</span>
+<span class="pc" id="L103">        }</span>
+        
+<span class="fc" id="L105">        return new_notifica;</span>
+    }
+    
+    /**
+     * Restituisce tutte le notifiche memorizzate nel database con un determinato username
+     * @param notifica contiene l'username per cercare le notifiche
+     * @param inizio indica da quale notifica comincia il recupero
+     * @param fine indica da quale notifica finisce il recupero
+     * @return tutte le notifiche memorizzate comprese tra inizio e fine e con l'username della notifica passata come parametro
+     */
+    @Override
+    public List&lt;Notifica&gt; findAll(Notifica notifica, int inizio, int fine) {
+<span class="fc" id="L117">        ArrayList&lt;Notifica&gt; notifiche = new ArrayList();</span>
+        
+        try {
+<span class="fc" id="L120">            connection = DriverManagerConnectionPool.getConnection();</span>
+            
+<span class="fc" id="L122">            String query = &quot;SELECT * FROM Notifica AS n WHERE n.username = ? ORDER BY n.id DESC LIMIT ?, ?;&quot;;</span>
+            
+<span class="fc" id="L124">            PreparedStatement statement = null;</span>
+<span class="fc" id="L125">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L126">            statement.setString(1, notifica.getDestinatario());</span>
+<span class="fc" id="L127">            statement.setInt(2, inizio);</span>
+<span class="fc" id="L128">            statement.setInt(3, fine);</span>
+<span class="fc" id="L129">            ResultSet rs = statement.executeQuery();</span>
+
+<span class="fc bfc" id="L131" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L132">                Notifica notif = new Notifica(rs.getInt(&quot;id&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;categoria&quot;), rs.getString(&quot;mittente&quot;), rs.getString(&quot;testo&quot;), rs.getBoolean(&quot;letta&quot;), rs.getString(&quot;data&quot;));</span>
+<span class="fc" id="L133">                notifiche.add(notif);</span>
+<span class="fc" id="L134">            }</span>
+<span class="nc" id="L135">        } catch (SQLException ex) {</span>
+<span class="nc" id="L136">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc" id="L138">            close();</span>
+<span class="pc" id="L139">        }</span>
+        
+<span class="fc" id="L141">        return notifiche;</span>
+    }
+    
+    @Override
+    public void close() {
+        try {
+<span class="fc" id="L147">            connection.close();</span>
+<span class="nc" id="L148">        } catch (SQLException ex) {</span>
+<span class="nc" id="L149">            Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+        } finally {
+<span class="nc" id="L151">            try {</span>
+<span class="pc" id="L152">                DriverManagerConnectionPool.releaseConnection(connection);</span>
+<span class="nc" id="L153">            } catch (SQLException ex) {</span>
+<span class="nc" id="L154">                Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc" id="L155">            }</span>
+<span class="nc" id="L156">        }</span>
+<span class="fc" id="L157">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

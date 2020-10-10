@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Piatto.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">entity</a> &gt; <span class="el_source">Piatto.java</span></div><h1>Piatto.java</h1><pre class="source lang-java linenums">package entity;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+/**
+ * Rappresenta un piatto del menu
+ */
+public class Piatto implements Serializable {
+    private Long id;
+    private String nome;
+    private String categoria;
+    private String ingredienti;
+    private String descrizione;
+    private Float prezzo;
+    private String foto;
+
+    /**
+     * Crea un nuovo piatto vuoto
+     */
+<span class="fc" id="L21">    public Piatto() {</span>
+<span class="fc" id="L22">    }</span>
+
+    /**
+     * Crea un piatto inizializzandola con i valori passati come parametro
+     * @param id id del piatto
+     * @param nome nome del piatto
+     * @param categoria categoria culinaria del piatto
+     * @param descrizione descrizione del piatto
+     * @param ingredienti ingredienti del piatto
+     * @param prezzo prezzo del piatto
+     * @param foto percorso della foto del piatto
+     */
+<span class="fc" id="L34">    public Piatto(Long id, String nome, String categoria, String descrizione, String ingredienti, Float prezzo, String foto) {</span>
+<span class="fc" id="L35">        this.id = id;</span>
+<span class="fc" id="L36">        this.nome = nome;</span>
+<span class="fc" id="L37">        this.categoria = categoria;</span>
+<span class="fc" id="L38">        this.ingredienti = ingredienti;</span>
+<span class="fc" id="L39">        this.descrizione = descrizione;</span>
+<span class="fc" id="L40">        this.prezzo = prezzo;</span>
+<span class="fc" id="L41">        this.foto = foto;</span>
+<span class="fc" id="L42">    }</span>
+
+    /**
+     * Crea un piatto inizializzandola con i valori passati come parametro
+     * @param nome nome del piatto
+     * @param categoria categoria culinaria del piatto
+     * @param descrizione descrizione del piatto
+     * @param ingredienti ingredienti del piatto
+     * @param prezzo prezzo del piatto
+     * @param foto percorso della foto del piatto
+     */
+<span class="fc" id="L53">    public Piatto(String nome, String categoria, String descrizione, String ingredienti, Float prezzo, String foto) {</span>
+<span class="fc" id="L54">        this.nome = nome;</span>
+<span class="fc" id="L55">        this.categoria = categoria;</span>
+<span class="fc" id="L56">        this.ingredienti = ingredienti;</span>
+<span class="fc" id="L57">        this.descrizione = descrizione;</span>
+<span class="fc" id="L58">        this.prezzo = prezzo;</span>
+<span class="fc" id="L59">        this.foto = foto;</span>
+<span class="fc" id="L60">    }</span>
+
+    /**
+     * Restituisce l'id del piatto
+     * @return id
+     */
+    public Long getId() {
+<span class="fc" id="L67">        return id;</span>
+    }
+
+    /**
+     * Setta un nuovo id al piatto
+     * @param id nuovo id
+     */
+    public void setId(Long id) {
+<span class="fc" id="L75">        this.id = id;</span>
+<span class="fc" id="L76">    }</span>
+
+    /**
+     * Restituisce il nome del piatto
+     * @return nome
+     */
+    public String getNome() {
+<span class="fc" id="L83">        return nome;</span>
+    }
+
+    /**
+     * Setta un nuovo nome al piatto
+     * @param nome nuovo nome
+     */
+    public void setNome(String nome) {
+<span class="fc" id="L91">        this.nome = nome;</span>
+<span class="fc" id="L92">    }</span>
+
+    /**
+     * Restituisce la categoria del piatto
+     * @return categoria
+     */
+    public String getCategoria() {
+<span class="fc" id="L99">        return categoria;</span>
+    }
+
+    /**
+     * Setta una nuova categoria al piatto
+     * @param categoria nuova categoria
+     */
+    public void setCategoria(String categoria) {
+<span class="fc" id="L107">        this.categoria = categoria;</span>
+<span class="fc" id="L108">    }</span>
+
+    /**
+     * Restituisce gli ingredienti del piatto
+     * @return ingredienti
+     */
+    public String getIngredienti() {
+<span class="fc" id="L115">        return ingredienti;</span>
+    }
+
+    /**
+     * Setta dei nuovi ingredienti del piatto
+     * @param ingredienti nuovi ingredienti
+     */
+    public void setIngredienti(String ingredienti) {
+<span class="fc" id="L123">        this.ingredienti = ingredienti;</span>
+<span class="fc" id="L124">    }</span>
+
+    /**
+     * Restituisce la descrizione del piatto
+     * @return descrizione
+     */
+    public String getDescrizione() {
+<span class="fc" id="L131">        return descrizione;</span>
+    }
+
+    /**
+     * Setta una nuova descrizione del piatto
+     * @param descrizione nuova descrizione
+     */
+    public void setDescrizione(String descrizione) {
+<span class="fc" id="L139">        this.descrizione = descrizione;</span>
+<span class="fc" id="L140">    }</span>
+
+    /**
+     * Restituisce il prezzo del piatto
+     * @return prezzo
+     */
+
+    public Float getPrezzo() {
+<span class="fc" id="L148">        return prezzo;</span>
+    }
+
+    /**
+     * Setta un nuovo prezzo del piatto
+     * @param prezzo nuovo prezzo
+     */
+    public void setPrezzo(Float prezzo) {
+<span class="fc" id="L156">        this.prezzo = prezzo;</span>
+<span class="fc" id="L157">    }</span>
+
+    /**
+     * Restituisce il percorso della foto del piatto
+     * @return foto
+     */
+    public String getFoto() {
+<span class="fc" id="L164">        return foto;</span>
+    }
+
+    /**
+     * Setta un nuovo percorso per la foto del piatto
+     * @param foto nuovo percorso della foto
+     */
+    public void setFoto(String foto) {
+<span class="fc" id="L172">        this.foto = foto;</span>
+<span class="fc" id="L173">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L177">        return &quot;Piatto{&quot; +</span>
+                &quot;id=&quot; + id +
+                &quot;, nome='&quot; + nome + '\'' +
+                &quot;, categoria='&quot; + categoria + '\'' +
+                &quot;, ingredienti='&quot; + ingredienti + '\'' +
+                &quot;, descrizione='&quot; + descrizione + '\'' +
+                &quot;, prezzo=&quot; + prezzo +
+                &quot;, foto=&quot; + foto +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="fc bfc" id="L190" title="All 2 branches covered.">        if (this == obj) {</span>
+<span class="fc" id="L191">            return true;</span>
+        }
+<span class="fc bfc" id="L193" title="All 2 branches covered.">        if (obj == null) {</span>
+<span class="fc" id="L194">            return false;</span>
+        }
+<span class="fc bfc" id="L196" title="All 2 branches covered.">        if (getClass() != obj.getClass()) {</span>
+<span class="fc" id="L197">            return false;</span>
+        }
+<span class="fc" id="L199">        final Piatto other = (Piatto) obj;</span>
+<span class="fc bfc" id="L200" title="All 2 branches covered.">        if (!Objects.equals(this.nome, other.nome)) {</span>
+<span class="fc" id="L201">            return false;</span>
+        }
+<span class="fc bfc" id="L203" title="All 2 branches covered.">        if (!Objects.equals(this.categoria, other.categoria)) {</span>
+<span class="fc" id="L204">            return false;</span>
+        }
+<span class="fc bfc" id="L206" title="All 2 branches covered.">        if (!Objects.equals(this.ingredienti, other.ingredienti)) {</span>
+<span class="fc" id="L207">            return false;</span>
+        }
+<span class="fc bfc" id="L209" title="All 2 branches covered.">        if (!Objects.equals(this.descrizione, other.descrizione)) {</span>
+<span class="fc" id="L210">            return false;</span>
+        }
+<span class="fc bfc" id="L212" title="All 2 branches covered.">        if (!Objects.equals(this.foto, other.foto)) {</span>
+<span class="fc" id="L213">            return false;</span>
+        }
+<span class="fc bfc" id="L215" title="All 2 branches covered.">        if (!Objects.equals(this.prezzo, other.prezzo)) {</span>
+<span class="fc" id="L216">            return false;</span>
+        }
+<span class="fc" id="L218">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

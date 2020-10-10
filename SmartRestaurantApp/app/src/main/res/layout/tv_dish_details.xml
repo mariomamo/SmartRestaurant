@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1000dp" android:layout_height="700dp"
+    android:layout_alignParentRight="true">
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="Nome piatto"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_descrizione"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_nome"
+        android:layout_above="@id/ll_barra"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/tv_descrizione"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:scrollbars="vertical"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum nisi eget lectus blandit sodales. Nullam gravida nunc blandit erat vestibulum, quis eleifend velit aliquet. Vestibulum efficitur massa nulla, consectetur egestas magna vehicula sit amet. Phasellus accumsan sed tortor id condimentum. Nunc mauris nibh, ultrices at erat sed, ornare pretium tortor. Nam at nulla id quam ultrices tincidunt sed sit amet leo. Nam varius enim lectus, eu porttitor leo pellentesque in. Praesent eleifend vitae nibh a efficitur. Sed id posuere erat, et tristique metus. Sed vestibulum diam ipsum, volutpat condimentum enim ultricies sit amet."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_allergeni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/ll_descrizione"
+        android:layout_below="@id/tv_nome"
+        android:layout_above="@id/ll_barra"
+        android:padding="20dp">
+
+        <CheckBox
+            android:id="@+id/c_allergie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Seleziona per indicare allergie"
+            android:onClick="check"/>
+
+        <EditText
+            android:id="@+id/et_allergie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Scrivi qui le tue allergie alimentari.\nL'indicazione è valida per un solo piatto."
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:gravity="right">
+
+        <Button
+            android:layout_width="@dimen/btn_small"
+            android:layout_height="@dimen/btn_small"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:text="-"
+            android:onClick="changeQuantity"/>
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="1"
+            android:textSize="30dp"/>
+
+        <Button
+            android:layout_width="@dimen/btn_small"
+            android:layout_height="@dimen/btn_small"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textSize="15dp"
+            android:onClick="changeQuantity"/>
+
+        <Button
+            android:id="@+id/btn_aggiungi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bordo_azzurro_state"
+            android:text="Aggiungi"
+            android:onClick="complete"/>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/btn_small"
+            android:layout_height="@dimen/btn_small"
+            android:layout_gravity="center"
+            android:background="@drawable/bordo_rosso_state"
+            android:textColor="@color/buttonCanc"
+            android:text="X"
+            android:textSize="20dp"
+            android:onClick="close"/>
+    </LinearLayout>
+</RelativeLayout>

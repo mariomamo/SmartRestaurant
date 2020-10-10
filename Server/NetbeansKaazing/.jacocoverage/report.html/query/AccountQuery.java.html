@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AccountQuery.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">query</a> &gt; <span class="el_source">AccountQuery.java</span></div><h1>AccountQuery.java</h1><pre class="source lang-java linenums">package query;
+
+import entity.Account;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * Si occupa del recupero delle informazioni relative agli account
+ * @author Syrenne
+ */
+<span class="fc" id="L15">public class AccountQuery implements AccountQueryInterface {</span>
+    private Connection connection;
+
+    /**
+     * Effettua il recupero delle informazioni dell'account dal database, se esistono username e password
+     * @param account contiene username e password per recuperare le informazioni dal database
+     * @return newAccount, null se le credenziali non sono presenti nel database, altrimenti � inizializzato con le informazioni dell'account del database
+     */
+    @Override
+    public Account login(Account account) {
+<span class="fc" id="L25">        PreparedStatement statement = null;</span>
+<span class="fc" id="L26">        Account newAccount = null;</span>
+        
+        try {
+<span class="fc" id="L29">            connection = DriverManagerConnectionPool.getConnection();</span>
+            
+<span class="fc" id="L31">            String query = &quot;SELECT a.username, a.password, a.nome, a.tipo FROM Account as a WHERE a.username = ? AND aes_decrypt(a.password, \&quot;&quot; + DbManager.getKey() + &quot;\&quot;) = ?&quot;;</span>
+            
+<span class="fc" id="L33">            statement = connection.prepareStatement(query);</span>
+<span class="fc" id="L34">            statement.setString(1, account.getUsername());</span>
+<span class="fc" id="L35">            statement.setString(2, account.getPassword());</span>
+            
+<span class="fc" id="L37">            ResultSet rs = statement.executeQuery(); </span>
+
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            if(rs.next())   </span>
+<span class="fc" id="L40">                newAccount = new Account(rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;), rs.getString(&quot;nome&quot;), rs.getInt(&quot;tipo&quot;));</span>
+<span class="nc" id="L41">        } catch (SQLException ex) {</span>
+<span class="nc" id="L42">            ex.printStackTrace();</span>
+        } finally {
+<span class="pc bpc" id="L44" title="5 of 6 branches missed.">            if (statement != null) {</span>
+                try {
+<span class="pc" id="L46">                    statement.close();</span>
+<span class="nc" id="L47">                } catch (SQLException ex) {</span>
+<span class="nc" id="L48">                    Logger.getLogger(Account.class.getName()).log(Level.SEVERE, null, ex);</span>
+                } finally {
+<span class="pc bpc" id="L50" title="17 of 18 branches missed.">                    if (connection != null) {</span>
+                        try {
+<span class="pc" id="L52">                            DriverManagerConnectionPool.releaseConnection(connection);</span>
+<span class="nc" id="L53">                        } catch (SQLException ex) {</span>
+<span class="nc" id="L54">                            ex.printStackTrace();</span>
+<span class="pc" id="L55">                        }</span>
+                    }
+<span class="pc" id="L57">                }</span>
+            }
+<span class="nc" id="L59">        }</span>
+        
+<span class="fc" id="L61">        return newAccount;</span>
+    }
+    
+    /**
+     * Chiude la connessione
+     */
+    @Override
+    public void close() {
+        try {
+<span class="fc" id="L70">            connection.close();</span>
+<span class="nc" id="L71">        } catch (SQLException ex) {</span>
+<span class="nc" id="L72">            Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+        } finally {
+<span class="nc" id="L74">            try {</span>
+<span class="pc" id="L75">                DriverManagerConnectionPool.releaseConnection(connection);</span>
+<span class="nc" id="L76">            } catch (SQLException ex) {</span>
+<span class="nc" id="L77">                Logger.getLogger(TavoloQuery.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="pc" id="L78">            }</span>
+<span class="nc" id="L79">        }</span>
+<span class="fc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

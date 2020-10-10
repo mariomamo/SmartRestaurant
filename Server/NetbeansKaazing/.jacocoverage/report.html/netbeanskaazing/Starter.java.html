@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Starter.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">netbeanskaazing</a> &gt; <span class="el_source">Starter.java</span></div><h1>Starter.java</h1><pre class="source lang-java linenums">package netbeanskaazing;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import entity.*;
+import java.text.SimpleDateFormat;
+import query.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
+import javax.naming.NamingException;
+
+/**
+ * Si occupa di creare e gestire gli eventi per lo scambio di dati tra client e server
+ * @author Syrenne
+ */
+<span class="nc" id="L24">public class Starter {</span>
+    public static final String IP_MARIO_EHT = &quot;192.168.1.153&quot;;
+    public static final String IP_MARIO_WIFI = &quot;192.168.1.148&quot;;
+    public static final String IP_MARIO_UNI = &quot;172.19.242.240&quot;;
+    public static final String IP_MARIO_2 = &quot;192.168.1.67&quot;;
+    public static final String IP_VALERIA = &quot;192.168.178.28&quot;;
+    
+    public static final String IP = IP_MARIO_WIFI;
+    public static final String PORTA = &quot;8001&quot;;
+    
+    private static SmartRestaurantDispatcher loginTabletToServer;
+    private static SmartRestaurantDispatcher loginServerToTablet;
+    private static SmartRestaurantDispatcher cucinaTabletToServer;
+    private static SmartRestaurantDispatcher cucinaServerToTablet;
+    private static SmartRestaurantDispatcher menuTabletToServer;
+    private static SmartRestaurantDispatcher menuServerToTablet;
+    private static SmartRestaurantDispatcher carrelloServerToTablet;
+    private static SmartRestaurantDispatcher notificaTabletToServer;
+    private static SmartRestaurantDispatcher notificaServerToTablet;
+    private static SmartRestaurantDispatcher salaTabletToServer;
+    private static SmartRestaurantDispatcher salaServerToTablet;
+    
+    public static void main (String[] args) throws JMSException, NamingException {
+<span class="nc" id="L47">        loginTabletToServer = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/loginTabletToServer&quot;);</span>
+<span class="nc" id="L48">        loginServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/topic/loginServerToTablet&quot;);</span>
+        
+        /**
+         * Si occupa del login da parte degli account e dei tavoli
+         * Ricerca nel database le credenziali e, se esiste, ne restituisce l'account o il tavolo
+         */
+<span class="nc" id="L54">        loginTabletToServer.subscribe(new MessageListener() {</span>
+            @Override
+            public void onMessage(Message msg) {
+                try {
+<span class="nc" id="L58">                    String mess = ((TextMessage) msg).getText();</span>
+<span class="nc" id="L59">                    String username = msg.getStringProperty(&quot;username&quot;);</span>
+<span class="nc" id="L60">                    String password = msg.getStringProperty(&quot;password&quot;);</span>
+                    
+<span class="nc" id="L62">                    System.out.println(&quot;&gt;&gt; Tentativo di login&quot;);</span>
+<span class="nc" id="L63">                    System.out.println(&quot;Username : &quot; + username + &quot;, password : &quot; + password);</span>
+                    
+<span class="nc" id="L65">                    AccountQuery accountQuery = new AccountQuery();</span>
+<span class="nc" id="L66">                    Account account = accountQuery.login(new Account(username, password, &quot;&quot;, 0));</span>
+                    
+<span class="nc" id="L68">                    HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L69">                    String uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+                    
+<span class="nc bnc" id="L71" title="All 2 branches missed.">                    if (account != null) {</span>
+<span class="nc" id="L72">                        System.out.println(&quot;&gt;&gt; Login effettuato con successo per un account!&quot;);</span>
+
+<span class="nc" id="L74">                        properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L75">                        properties.put(&quot;nome&quot;, account.getNome());</span>
+<span class="nc" id="L76">                        properties.put(&quot;tipo&quot;, account.getTipo() + &quot;&quot;);</span>
+                        
+<span class="nc" id="L78">                        loginServerToTablet.sendMessage(&quot;&quot;, properties);</span>
+                    } else {
+<span class="nc" id="L80">                        TavoloQuery tavoloQuery = new TavoloQuery();</span>
+<span class="nc" id="L81">                        Tavolo tavolo = tavoloQuery.login(new Tavolo(username, password, &quot;&quot;, 0, false, false));</span>
+                        String comandaJson;
+<span class="nc" id="L83">                        Gson gson = new Gson();</span>
+                        Comanda comanda;
+<span class="nc" id="L85">                        ComandaQuery comandaQuery = new ComandaQuery();</span>
+                        
+<span class="nc bnc" id="L87" title="All 2 branches missed.">                        if (tavolo != null) {</span>
+<span class="nc" id="L88">                            System.out.println(&quot;&gt;&gt; Login effettuato con successo per un tavolo!&quot;);</span>
+                            int id_comanda;
+                            
+<span class="nc bnc" id="L91" title="All 2 branches missed.">                            if (tavolo.isLibero()) {</span>
+<span class="nc" id="L92">                                System.out.println(&quot;LIBERO&quot;);</span>
+<span class="nc" id="L93">                                tavolo.setLibero(false);</span>
+<span class="nc" id="L94">                                comanda = new Comanda();</span>
+<span class="nc" id="L95">                                comanda.setStato(false);</span>
+<span class="nc" id="L96">                                comanda.setData(getHour());</span>
+<span class="nc" id="L97">                                tavolo.setComanda(comanda);</span>
+<span class="nc" id="L98">                                comandaQuery.insert(tavolo);</span>
+<span class="nc" id="L99">                                tavoloQuery.update(tavolo);</span>
+                            }
+                            
+<span class="nc" id="L102">                            comanda = comandaQuery.findByUsername(tavolo.getUsername());</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">                            if (comanda != null) {</span>
+<span class="nc" id="L104">                                PiattoOrdinatoQuery poq = new PiattoOrdinatoQuery();</span>
+<span class="nc" id="L105">                                ArrayList&lt;PiattoOrdinato&gt; piattiOrdinati = (ArrayList&lt;PiattoOrdinato&gt;) poq.findByComanda(comanda);</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">                                if (piattiOrdinati != null) {</span>
+<span class="nc" id="L107">                                    comanda.setPiattiOrdinati(piattiOrdinati);</span>
+                                }
+<span class="nc" id="L109">                            } else {</span>
+<span class="nc" id="L110">                                comanda = new Comanda();</span>
+<span class="nc" id="L111">                                comanda.setStato(false);</span>
+<span class="nc" id="L112">                                comanda.setData(getHour());</span>
+<span class="nc" id="L113">                                tavolo.setComanda(comanda);</span>
+<span class="nc" id="L114">                                comandaQuery.insert(tavolo);</span>
+<span class="nc" id="L115">                                comanda = comandaQuery.findByUsername(tavolo.getUsername());</span>
+                            }
+                            
+<span class="nc" id="L118">                            tavolo.setComanda(comanda);</span>
+<span class="nc" id="L119">                            comandaJson = gson.toJson(comanda);</span>
+<span class="nc" id="L120">                            System.out.println(comandaJson);</span>
+<span class="nc" id="L121">                            id_comanda = comanda.getId();</span>
+                           
+<span class="nc" id="L123">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L124">                            properties.put(&quot;nome&quot;, tavolo.getNome());</span>
+<span class="nc" id="L125">                            properties.put(&quot;password&quot;, password);</span>
+<span class="nc" id="L126">                            properties.put(&quot;id_comanda&quot;, id_comanda + &quot;&quot;);</span>
+<span class="nc" id="L127">                            properties.put(&quot;comanda&quot;, comandaJson);</span>
+<span class="nc" id="L128">                            loginServerToTablet.sendMessage(&quot;&quot;, properties);</span>
+<span class="nc" id="L129">                        } else {</span>
+<span class="nc" id="L130">                            System.out.println(&quot;&gt;&gt; Login errato&quot;);</span>
+<span class="nc" id="L131">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L132">                            loginServerToTablet.sendMessage(&quot;&quot;, properties);</span>
+                        }
+                    }
+<span class="nc" id="L135">                } catch (JMSException ex) {</span>
+<span class="nc" id="L136">                    ex.printStackTrace();</span>
+<span class="nc" id="L137">                }</span>
+<span class="nc" id="L138">            }</span>
+       });
+        
+<span class="nc" id="L141">        cucinaTabletToServer = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/cucinaTabletToServer&quot;);</span>
+<span class="nc" id="L142">        cucinaServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/cucinaServerToTablet&quot;);</span>
+        
+        /**
+         * Si occupa di fornire tutte le comande alla cucina
+         */
+<span class="nc" id="L147">        cucinaTabletToServer.subscribe(new MessageListener() {</span>
+            @Override
+            public void onMessage(Message msg) {
+                try {
+<span class="nc" id="L151">                    String azione = msg.getStringProperty(&quot;action&quot;);</span>
+<span class="nc" id="L152">                    String uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+<span class="nc" id="L153">                    System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+<span class="nc" id="L154">                    TavoloQuery tavoloQuery = new TavoloQuery();</span>
+                    int id_piatto_ordinato;
+<span class="nc" id="L156">                    PiattoOrdinatoQuery poq = null;</span>
+<span class="nc" id="L157">                    PiattoOrdinato piatto = null;</span>
+<span class="nc" id="L158">                    ComandaQuery cmq = new ComandaQuery();</span>
+                    
+<span class="nc bnc" id="L160" title="All 14 branches missed.">                    switch (azione) {</span>
+                        case DbManager.COMANDE_GET_ALL:
+<span class="nc" id="L162">                            List&lt;Tavolo&gt; tavoli = tavoloQuery.findAllComanda();</span>
+<span class="nc" id="L163">                            Gson gson = new Gson();</span>
+<span class="nc" id="L164">                            String json = gson.toJson(tavoli);</span>
+
+<span class="nc" id="L166">                            HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L167">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L168">                            properties.put(&quot;tavoli&quot;, json);</span>
+
+<span class="nc" id="L170">                            cucinaServerToTablet.sendMessage(&quot;Comande&quot;, properties);</span>
+<span class="nc" id="L171">                            break;</span>
+                        case DbManager.COMANDA_COMPLETATA:
+<span class="nc" id="L173">                            id_piatto_ordinato = Integer.parseInt(msg.getStringProperty(&quot;id_piatto_ordinato&quot;));</span>
+<span class="nc" id="L174">                            poq = new PiattoOrdinatoQuery();</span>
+<span class="nc" id="L175">                            piatto = poq.findById(id_piatto_ordinato);</span>
+<span class="nc" id="L176">                            piatto.setStato(true);</span>
+                            
+<span class="nc" id="L178">                            System.out.println(&quot;ID: &quot; + piatto.getId() + &quot;, COMANDA: &quot; + piatto.getComanda());</span>
+<span class="nc" id="L179">                            poq.update(piatto, piatto.getComanda());</span>
+<span class="nc" id="L180">                            break;</span>
+                        case DbManager.COMANDA_RIMOSSA:
+<span class="nc" id="L182">                            id_piatto_ordinato = Integer.parseInt(msg.getStringProperty(&quot;id_piatto_ordinato&quot;));</span>
+<span class="nc" id="L183">                            System.out.println(&quot;ID: &quot; + id_piatto_ordinato);</span>
+<span class="nc" id="L184">                            poq = new PiattoOrdinatoQuery();</span>
+<span class="nc" id="L185">                            piatto = poq.findById(id_piatto_ordinato);</span>
+<span class="nc bnc" id="L186" title="All 2 branches missed.">                            if (piatto != null)</span>
+<span class="nc" id="L187">                                poq.delete(piatto);</span>
+                            break;
+                        default: break;
+                    }
+<span class="nc" id="L191">                } catch (JMSException ex) {</span>
+<span class="nc" id="L192">                    Logger.getLogger(Starter.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L193">                }</span>
+<span class="nc" id="L194">            }</span>
+        });
+        
+<span class="nc" id="L197">        menuTabletToServer = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/menuTabletToServer&quot;);</span>
+<span class="nc" id="L198">        menuServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/menuServerToTablet&quot;);</span>
+<span class="nc" id="L199">        carrelloServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/carrelloServerToTablet&quot;);</span>
+        
+        /**
+         * Rende possibile il recupero di tutti i piatti presenti nel menu e la loro ordinazione
+         */
+<span class="nc" id="L204">        menuTabletToServer.subscribe(new MessageListener() {</span>
+            @Override
+            public void onMessage(Message msg) {
+                try {
+<span class="nc" id="L208">                    String azione = msg.getStringProperty(&quot;action&quot;);</span>
+<span class="nc" id="L209">                    String uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+<span class="nc" id="L210">                    Gson gson = new Gson();</span>
+<span class="nc" id="L211">                    HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+                    
+<span class="nc bnc" id="L213" title="All 10 branches missed.">                    switch (azione) {</span>
+                        case DbManager.PIATTI_GET_ALL:
+<span class="nc" id="L215">                            String type = msg.getStringProperty(&quot;type&quot;);</span>
+                            
+<span class="nc" id="L217">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L219">                            PiattoQuery piattoQuery = new PiattoQuery();</span>
+<span class="nc" id="L220">                            Piatto p = new Piatto();</span>
+<span class="nc" id="L221">                            p.setCategoria(type);</span>
+<span class="nc" id="L222">                            List&lt;Piatto&gt; piatti = piattoQuery.findByCategoria(p, 0, 100);</span>
+<span class="nc" id="L223">                            String json = gson.toJson(piatti);</span>
+                            
+<span class="nc" id="L225">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L226">                            properties.put(&quot;piatti&quot;, json);</span>
+                            
+<span class="nc" id="L228">                            menuServerToTablet.sendMessage(&quot;Piatti del menu&quot;, properties);</span>
+                            
+<span class="nc" id="L230">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+                            
+<span class="nc" id="L232">                            break;</span>
+                        case DbManager.INSERT_ORDINE:
+<span class="nc" id="L234">                            String username = msg.getStringProperty(&quot;username&quot;);</span>
+<span class="nc" id="L235">                            String ordineJson = msg.getStringProperty(&quot;ordine&quot;);</span>
+<span class="nc" id="L236">                            String id_comanda = msg.getStringProperty(&quot;comanda&quot;);</span>
+                            
+<span class="nc" id="L238">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+                            int id;
+<span class="nc bnc" id="L241" title="All 2 branches missed.">                            if (id_comanda.equals(&quot;null&quot;)) {</span>
+<span class="nc" id="L242">                                id = -1;</span>
+<span class="nc" id="L243">                                TavoloQuery tavoloQuery = new TavoloQuery();</span>
+<span class="nc" id="L244">                                Tavolo tavolo = tavoloQuery.findByUsername(username);</span>
+<span class="nc" id="L245">                                id = tavolo.getComanda().getId();</span>
+<span class="nc" id="L246">                            } else {</span>
+<span class="nc" id="L247">                                id = Integer.parseInt(id_comanda);</span>
+                            }
+                            
+<span class="nc" id="L250">                            System.out.println(&quot;INSERISCO L'ORDINE PER IL TAVOLO: &quot; + username + &quot;, id comanda: &quot; + id);</span>
+                            
+<span class="nc" id="L252">                            ArrayList&lt;PiattoOrdinato&gt; carrello = gson.fromJson(ordineJson, new TypeToken&lt;ArrayList&lt;PiattoOrdinato&gt;&gt;(){}.getType());</span>
+<span class="nc" id="L253">                            PiattoOrdinatoQuery poq = new PiattoOrdinatoQuery();</span>
+<span class="nc bnc" id="L254" title="All 2 branches missed.">                            for (PiattoOrdinato po : carrello) {</span>
+<span class="nc" id="L255">                                poq.insert(po, id);</span>
+<span class="nc" id="L256">                            }</span>
+                            
+<span class="nc" id="L258">                            properties.put(&quot;comanda&quot;, id + &quot;&quot;);</span>
+<span class="nc" id="L259">                            carrelloServerToTablet.sendMessage(&quot;Ordine ricevuto&quot;, properties);</span>
+                        default: break;
+                    }
+<span class="nc" id="L262">                } catch (JMSException ex) {</span>
+<span class="nc" id="L263">                    Logger.getLogger(Starter.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L264">                }</span>
+<span class="nc" id="L265">            }</span>
+        });
+        
+<span class="nc" id="L268">        notificaTabletToServer = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/notificaTabletToServer&quot;);</span>
+<span class="nc" id="L269">        notificaServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/topic/notificaServerToTablet&quot;);</span>
+        
+        /**
+         * Gestisce il meccanismo dell'invio e ricezione delle notifiche
+         */
+<span class="nc" id="L274">        notificaTabletToServer.subscribe(new MessageListener() {</span>
+            @Override
+            public void onMessage(Message msg) {
+                try {
+<span class="nc" id="L278">                    Gson gson = new Gson();</span>
+<span class="nc" id="L279">                    String uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+                    
+<span class="nc" id="L281">                    String mess = ((TextMessage) msg).getText();</span>
+<span class="nc" id="L282">                    String action = msg.getStringProperty(&quot;action&quot;);</span>
+                    
+<span class="nc bnc" id="L284" title="All 2 branches missed.">                    if(action.equals(DbManager.NOTIFICA_SEND)) {</span>
+<span class="nc" id="L285">                        System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                        
+<span class="nc" id="L287">                        String notificaJson = msg.getStringProperty(&quot;notifica&quot;);</span>
+<span class="nc" id="L288">                        Notifica notifica = gson.fromJson(notificaJson, Notifica.class);</span>
+<span class="nc" id="L289">                        NotificaQuery notificaQuery = new NotificaQuery();</span>
+<span class="nc" id="L290">                        Notifica new_notifica = notificaQuery.findById(notifica);</span>
+                        
+<span class="nc bnc" id="L292" title="All 2 branches missed.">                        if(new_notifica == null) {</span>
+<span class="nc" id="L293">                            notificaQuery.insert(notifica);</span>
+
+<span class="nc" id="L295">                            HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L296">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L297">                            properties.put(&quot;notifica&quot;, notificaJson);</span>
+
+<span class="nc" id="L299">                            notificaServerToTablet.sendMessage(&quot;Notifica&quot;, properties);</span>
+                            
+<span class="nc" id="L301">                            System.out.println(&quot;Notifica inviata&quot;);</span>
+<span class="nc" id="L302">                        } else {</span>
+<span class="nc" id="L303">                            notificaQuery.update(notifica);</span>
+                        }
+<span class="nc bnc" id="L305" title="All 2 branches missed.">                    } else if(action.equals(DbManager.NOTIFICA_RECEIVE)) {</span>
+<span class="nc" id="L306">                        System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                        
+<span class="nc" id="L308">                        String username = msg.getStringProperty(&quot;username&quot;);</span>
+<span class="nc" id="L309">                        int first = Integer.parseInt(msg.getStringProperty(&quot;first&quot;));</span>
+<span class="nc" id="L310">                        int last = Integer.parseInt(msg.getStringProperty(&quot;last&quot;));</span>
+                        List&lt;Notifica&gt; list;
+<span class="nc" id="L312">                        NotificaQuery notificaQuery = new NotificaQuery();</span>
+<span class="nc" id="L313">                        Notifica notifica = new Notifica();</span>
+<span class="nc" id="L314">                        notifica.setDestinatario(username);</span>
+<span class="nc" id="L315">                        list = notificaQuery.findAll(notifica, first, last);</span>
+<span class="nc" id="L316">                        String json = gson.toJson(list);</span>
+<span class="nc" id="L317">                        HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L318">                        properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L319">                        properties.put(&quot;notifica&quot;, json);</span>
+
+<span class="nc" id="L321">                        notificaServerToTablet.sendMessage(&quot;Notifiche&quot;, properties);</span>
+
+<span class="nc" id="L323">                        System.out.println(&quot;Invio effettuato&quot;);</span>
+                    }
+<span class="nc" id="L325">                } catch (JMSException ex) {</span>
+<span class="nc" id="L326">                    ex.printStackTrace();</span>
+<span class="nc" id="L327">                }</span>
+<span class="nc" id="L328">            }</span>
+       });
+        
+<span class="nc" id="L331">        salaTabletToServer = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/salaTabletToServer&quot;);</span>
+<span class="nc" id="L332">        salaServerToTablet = new SmartRestaurantDispatcher(&quot;ws://&quot; + IP + &quot;:&quot; + PORTA + &quot;/jms&quot;, &quot;/queue/salaServerToTablet&quot;);</span>
+        
+        /**
+         * Gestisce tutte le operazioni possibili con i tavoli presenti nella sala (inserimento, modifiche, cancellazione e recupero in base ad un filtro)
+         */
+<span class="nc" id="L337">        salaTabletToServer.subscribe(new MessageListener() {</span>
+            @Override
+            public void onMessage(Message msg) {
+                try {
+<span class="nc" id="L341">                    String azione = msg.getStringProperty(&quot;action&quot;);</span>
+<span class="nc" id="L342">                    String uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+<span class="nc" id="L343">                    Gson gson = new Gson();</span>
+<span class="nc" id="L344">                    HashMap&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L345">                    TavoloQuery tavoloQuery = new TavoloQuery();</span>
+                    List&lt;Tavolo&gt; tavoli;
+                    Tavolo tavolo;
+                    String json;
+                    
+<span class="nc bnc" id="L350" title="All 42 branches missed.">                    switch (azione) {</span>
+                        case DbManager.TAVOLO_GET_ALL_FREE:
+<span class="nc" id="L352">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L354">                            tavoli = tavoloQuery.findAllFree();</span>
+<span class="nc" id="L355">                            json = gson.toJson(tavoli);</span>
+                            
+<span class="nc" id="L357">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L358">                            properties.put(&quot;tavoli&quot;, json);</span>
+                            
+<span class="nc" id="L360">                            salaServerToTablet.sendMessage(&quot;Tavoli liberi&quot;, properties);</span>
+                            
+<span class="nc" id="L362">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+<span class="nc" id="L363">                            break;</span>
+                        case DbManager.TAVOLO_GET_ALL_OCCUPIED:
+<span class="nc" id="L365">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L367">                            tavoli = tavoloQuery.findAllOccupied();</span>
+<span class="nc" id="L368">                            json = gson.toJson(tavoli);</span>
+                            
+<span class="nc" id="L370">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L371">                            properties.put(&quot;tavoli&quot;, json);</span>
+                            
+<span class="nc" id="L373">                            salaServerToTablet.sendMessage(&quot;Tavoli liberi&quot;, properties);</span>
+                            
+<span class="nc" id="L375">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+<span class="nc" id="L376">                            break;</span>
+                        case DbManager.TAVOLO_GET_ALL_WANT_PAY:
+<span class="nc" id="L378">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L380">                            tavoli = tavoloQuery.findAllWantPay();</span>
+<span class="nc" id="L381">                            json = gson.toJson(tavoli);</span>
+<span class="nc" id="L382">                            System.out.println(json);</span>
+                            
+<span class="nc" id="L384">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L385">                            properties.put(&quot;tavoli&quot;, json);</span>
+                            
+<span class="nc" id="L387">                            salaServerToTablet.sendMessage(&quot;Tavoli liberi&quot;, properties);</span>
+                            
+<span class="nc" id="L389">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+<span class="nc" id="L390">                            break;</span>
+                        case DbManager.TAVOLO_GET_ALL:
+<span class="nc" id="L392">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L394">                            tavoli = tavoloQuery.findAll();</span>
+<span class="nc" id="L395">                            json = gson.toJson(tavoli);</span>
+                            
+<span class="nc" id="L397">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L398">                            properties.put(&quot;tavoli&quot;, json);</span>
+                            
+<span class="nc" id="L400">                            salaServerToTablet.sendMessage(&quot;Tavoli liberi&quot;, properties);</span>
+                            
+<span class="nc" id="L402">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+<span class="nc" id="L403">                            break;</span>
+                        case DbManager.TAVOLO_GET_BY_USERNAME:
+<span class="nc" id="L405">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L407">                            String username = msg.getStringProperty(&quot;username&quot;);</span>
+<span class="nc" id="L408">                            tavolo = tavoloQuery.findByUsername(username);</span>
+<span class="nc" id="L409">                            json = gson.toJson(tavolo);</span>
+                            
+<span class="nc" id="L411">                            properties.put(&quot;UUID&quot;, uniqueId);</span>
+<span class="nc" id="L412">                            properties.put(&quot;tavolo&quot;, json);</span>
+                            
+<span class="nc" id="L414">                            salaServerToTablet.sendMessage(&quot;tavolo&quot;, properties);</span>
+                            
+<span class="nc" id="L416">                            System.out.println(&quot;Invio effettuato&quot;);</span>
+                        case DbManager.TAVOLO_CHANGE_STATE:
+<span class="nc" id="L418">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L420">                            json = msg.getStringProperty(&quot;tavolo&quot;);</span>
+<span class="nc" id="L421">                            tavolo = gson.fromJson(json, Tavolo.class);</span>
+                            
+                            //Creo una nuova comanda per il tavolo
+<span class="nc" id="L424">                            ComandaQuery cmq = new ComandaQuery();</span>
+<span class="nc" id="L425">                            Comanda comanda = new Comanda();</span>
+<span class="nc" id="L426">                            comanda.setStato(false);</span>
+<span class="nc" id="L427">                            comanda.setData(getHour());</span>
+<span class="nc" id="L428">                            tavolo.setComanda(comanda);</span>
+<span class="nc" id="L429">                            tavolo.setLibero(false);</span>
+<span class="nc" id="L430">                            cmq.insert(tavolo);                            </span>
+<span class="nc" id="L431">                            tavoloQuery.updateStato(tavolo);</span>
+<span class="nc" id="L432">                            break;</span>
+                        case DbManager.TAVOLO_CHANGE_PAY:
+<span class="nc" id="L434">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L436">                            json = msg.getStringProperty(&quot;tavolo&quot;);</span>
+<span class="nc" id="L437">                            tavolo = gson.fromJson(json, Tavolo.class);</span>
+<span class="nc" id="L438">                            tavoloQuery.updateVuolePagare(tavolo);</span>
+<span class="nc" id="L439">                            break;</span>
+                        case DbManager.TAVOLO_NEW:
+<span class="nc" id="L441">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L443">                            json = msg.getStringProperty(&quot;tavolo&quot;);</span>
+<span class="nc" id="L444">                            tavolo = gson.fromJson(json, Tavolo.class);</span>
+                            
+<span class="nc" id="L446">                            Tavolo temp_tavolo = tavoloQuery.findByUsername(tavolo.getUsername());</span>
+<span class="nc bnc" id="L447" title="All 2 branches missed.">                            if(temp_tavolo == null) {</span>
+<span class="nc" id="L448">                                tavoloQuery.insert(tavolo);</span>
+                            } else
+<span class="nc" id="L450">                                tavoloQuery.update(tavolo);</span>
+<span class="nc" id="L451">                            break;</span>
+                        case DbManager.TAVOLO_REMOVE:
+<span class="nc" id="L453">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId);</span>
+                            
+<span class="nc" id="L455">                            json = msg.getStringProperty(&quot;tavolo&quot;);</span>
+<span class="nc" id="L456">                            tavolo = gson.fromJson(json, Tavolo.class);</span>
+<span class="nc" id="L457">                            tavoloQuery.delete(tavolo);</span>
+<span class="nc" id="L458">                            break;</span>
+                        case DbManager.TAVOLO_CHANDE_PAYED:
+<span class="nc" id="L460">                            username = msg.getStringProperty(&quot;username&quot;);</span>
+<span class="nc" id="L461">                            uniqueId = msg.getStringProperty(&quot;UUID&quot;);</span>
+<span class="nc" id="L462">                            System.out.println(&quot;Ho ricevuto: &quot; + msg.getStringProperty(&quot;action&quot;) + &quot;, UUID: &quot; + uniqueId + &quot;, username: &quot; + username);</span>
+                            
+<span class="nc" id="L464">                            tavolo = tavoloQuery.findByUsername(username);</span>
+<span class="nc" id="L465">                            tavolo.setLibero(true);</span>
+<span class="nc" id="L466">                            tavolo.setVuolePagare(false);</span>
+<span class="nc" id="L467">                            tavoloQuery.setPagato(tavolo);</span>
+<span class="nc" id="L468">                            break;</span>
+                        /*case DbManager.INSERT_ORDINE:
+                            String username = msg.getStringProperty(&quot;username&quot;);
+                            String ordineJson = msg.getStringProperty(&quot;ordine&quot;);
+                            String id_comanda = msg.getStringProperty(&quot;comanda&quot;);
+                            int id;
+                            if (id_comanda.equals(&quot;null&quot;)) {
+                                id = -1;
+                                TavoloQuery tavoloQuery = new TavoloQuery();
+                                Tavolo tavolo = tavoloQuery.findByUsername(username);
+                                id = tavolo.getComanda().getId();
+                            } else {
+                                id = Integer.parseInt(id_comanda);
+                            }
+                            System.out.println(&quot;INSERISCO L'ORDINE PER IL TAVOLO: &quot; + username + &quot;, id comanda: &quot; + id);
+                            System.out.println(&quot;&gt;&gt; ordine: &quot; + ordineJson);
+                            
+                            ArrayList&lt;PiattoOrdinato&gt; carrello = gson.fromJson(ordineJson, new TypeToken&lt;ArrayList&lt;PiattoOrdinato&gt;&gt;(){}.getType());
+                            PiattoOrdinatoQuery poq = new PiattoOrdinatoQuery();
+                            for (PiattoOrdinato po : carrello) {
+                                System.out.println(&quot;[&quot; + po.getPiatto().getId() + &quot;] &quot; + po.getPiatto().getNome() + &quot;, &quot; + po.getQuantita() + &quot; pezzi&quot;);
+                                poq.insert(po, id);
+                            }
+                            
+                            properties.put(&quot;comanda&quot;, id + &quot;&quot;);
+                            salaServerToTablet.sendMessage(&quot;Ordine ricevuto!&quot;, properties);*/
+                        default: break;
+                    }
+<span class="nc" id="L496">                } catch (JMSException ex) {</span>
+<span class="nc" id="L497">                    Logger.getLogger(Starter.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L498">                }</span>
+<span class="nc" id="L499">            }</span>
+        });
+<span class="nc" id="L501">    }</span>
+    
+    public static String getHour() {        
+<span class="nc" id="L504">        final Calendar c = Calendar.getInstance();</span>
+
+<span class="nc" id="L506">        SimpleDateFormat timeFormat = new SimpleDateFormat(&quot;HH:mm&quot;);</span>
+<span class="nc" id="L507">        SimpleDateFormat dateFormat = new SimpleDateFormat(&quot;yyyy/MM/dd&quot;);</span>
+
+<span class="nc" id="L509">        String ora = timeFormat.format(c.getTime());</span>
+<span class="nc" id="L510">        String data = dateFormat.format(c.getTime());</span>
+<span class="nc" id="L511">        System.out.println(data + &quot; &quot; + ora);</span>
+<span class="nc" id="L512">        return data + &quot; &quot; + ora;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

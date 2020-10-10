@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="450dp"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/list_tavoli"
+            android:layout_width="450dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/primaryColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Informazioni del tavolo"
+            android:textSize="@dimen/title"
+            android:textColor="@color/primaryTextColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/primaryTextColor"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserisci qui l'username" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/primaryTextColor"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserisci qui la password" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textColor="@color/primaryTextColor"/>
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserisci qui il nome" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Posti"
+            android:textColor="@color/primaryTextColor"/>
+
+        <EditText
+            android:id="@+id/posti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="number"
+            android:hint="Inserisci qui il numero dei posti" />
+
+        <Switch
+            android:id="@+id/stato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libero"
+            android:textColor="@color/primaryTextColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:orientation="horizontal"
+            android:background="@color/primaryColor" >
+
+            <Button
+                android:id="@+id/salva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bordo_verde_state"
+                android:text="Salva"
+                android:textColor="@color/buttonSave"/>
+
+            <Button
+                android:id="@+id/elimina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordo_rosso_state"
+                android:text="Elimina"
+                android:textColor="@color/buttonCanc" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

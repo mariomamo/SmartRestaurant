@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>SmartRestaurantDispatcher.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NetbeansKaazing&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">netbeanskaazing</a> &gt; <span class="el_source">SmartRestaurantDispatcher.java</span></div><h1>SmartRestaurantDispatcher.java</h1><pre class="source lang-java linenums">package netbeanskaazing;
+
+
+import com.kaazing.gateway.jms.client.JmsConnectionFactory;
+import com.kaazing.gateway.jms.client.JmsInitialContext;
+import com.kaazing.net.auth.BasicChallengeHandler;
+import com.kaazing.net.auth.ChallengeHandler;
+import com.kaazing.net.auth.LoginHandler;
+import com.kaazing.net.http.HttpRedirectPolicy;
+import com.kaazing.net.ws.WebSocketFactory;
+import java.net.PasswordAuthentication;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageListener;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+public class SmartRestaurantDispatcher {
+    private String url;
+    private String destination;
+    public ConnectionFactory connectionFactory;
+    public Connection connection;
+    public Session session;
+<span class="nc" id="L35">    public String username = &quot;admin&quot;;</span>
+<span class="nc" id="L36">    public String password = &quot;admin&quot;;</span>
+    public MessageProducer producer;
+    public MessageConsumer consumer;
+    public InitialContext ctx;
+    private Destination dest;
+    private final Logger logger;
+
+<span class="nc" id="L43">    public SmartRestaurantDispatcher(String wsurl, String destination) {</span>
+<span class="nc" id="L44">        this.url = wsurl;</span>
+<span class="nc" id="L45">        this.destination = destination;</span>
+<span class="nc" id="L46">        this.logger = Logger.getLogger(&quot;[SmartRestaurantDispatcher]&quot;);</span>
+            
+        try {
+<span class="nc" id="L49">            Properties props = new Properties();</span>
+<span class="nc" id="L50">            props.setProperty(&quot;java.naming.factory.initial&quot;, &quot;com.kaazing.gateway.jms.client.JmsInitialContextFactory&quot;);</span>
+<span class="nc" id="L51">            ctx = new InitialContext(props);</span>
+<span class="nc" id="L52">            props.put(JmsInitialContext.CONNECTION_TIMEOUT, &quot;15000&quot;);</span>
+<span class="nc" id="L53">            connessione();</span>
+<span class="nc" id="L54">        } catch (NamingException ex) {</span>
+<span class="nc" id="L55">            logger.log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L56">        }</span>
+<span class="nc" id="L57">    }</span>
+    
+    private void connessione() {
+        try {
+<span class="nc" id="L61">            connectionFactory = (ConnectionFactory) ctx.lookup(&quot;ConnectionFactory&quot;);</span>
+<span class="nc" id="L62">            JmsConnectionFactory jmsConnectionFactory = (JmsConnectionFactory) connectionFactory;</span>
+<span class="nc" id="L63">            jmsConnectionFactory.setGatewayLocation(URI.create(url));</span>
+            
+<span class="nc" id="L65">            WebSocketFactory webSocketFactory = jmsConnectionFactory.getWebSocketFactory();</span>
+<span class="nc" id="L66">            webSocketFactory.setDefaultRedirectPolicy(HttpRedirectPolicy.ALWAYS);</span>
+<span class="nc" id="L67">            webSocketFactory.setDefaultChallengeHandler(createChallengeHandler());</span>
+            
+<span class="nc" id="L69">            connection = connectionFactory.createConnection(username, password);</span>
+<span class="nc" id="L70">            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);</span>
+<span class="nc" id="L71">            connection.start();</span>
+<span class="nc" id="L72">            System.out.println(&quot;Connected!&quot;);</span>
+            
+<span class="nc" id="L74">            dest = (Destination) ctx.lookup(destination);</span>
+            
+<span class="nc" id="L76">            producer = session.createProducer(dest);</span>
+            
+<span class="nc" id="L78">        } catch (NamingException | JMSException ex) {</span>
+            try {
+<span class="nc" id="L80">                disconnessione();</span>
+<span class="nc" id="L81">            } catch (JMSException ex1) {</span>
+<span class="nc" id="L82">               logger.log(Level.SEVERE, null, ex1);</span>
+<span class="nc" id="L83">            }</span>
+<span class="nc" id="L84">            logger.log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L85">        }</span>
+<span class="nc" id="L86">    }</span>
+    
+    public void subscribe(MessageListener listener) throws JMSException, NamingException {            
+<span class="nc" id="L89">        consumer = session.createConsumer(dest);</span>
+<span class="nc" id="L90">        consumer.setMessageListener(listener);</span>
+<span class="nc" id="L91">    }</span>
+    
+    public void subscribe(MessageListener listener, String selector) throws JMSException, NamingException {            
+<span class="nc" id="L94">        consumer = session.createConsumer(dest, selector);</span>
+<span class="nc" id="L95">        consumer.setMessageListener(listener);</span>
+<span class="nc" id="L96">    }</span>
+    
+    public void unsubscribe() throws JMSException {
+<span class="nc" id="L99">        consumer.close();</span>
+<span class="nc" id="L100">    }</span>
+    
+    private ChallengeHandler createChallengeHandler() {
+<span class="nc" id="L103">        final LoginHandler loginHandler = new LoginHandler() {</span>
+            @Override
+            public PasswordAuthentication getCredentials() {
+<span class="nc" id="L106">                return new PasswordAuthentication(username, password.toCharArray());</span>
+            }
+        };
+        
+<span class="nc" id="L110">        BasicChallengeHandler challengeHandler = BasicChallengeHandler.create();</span>
+<span class="nc" id="L111">        challengeHandler.setLoginHandler(loginHandler);</span>
+<span class="nc" id="L112">        return challengeHandler;</span>
+    }
+    
+    public void sendMessage(String message, HashMap&lt;String, String&gt; properties) {
+        TextMessage textMessage;
+        try {
+<span class="nc" id="L118">            textMessage = session.createTextMessage(message);</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">            for (String key : properties.keySet()) {</span>
+<span class="nc" id="L120">                textMessage.setStringProperty(key, properties.get(key));</span>
+<span class="nc" id="L121">            }</span>
+<span class="nc" id="L122">            producer.send(textMessage);</span>
+<span class="nc" id="L123">        } catch (JMSException e) {</span>
+<span class="nc" id="L124">            logger.log(Level.SEVERE, &quot;Error sending message [&quot; + message + &quot;]! &quot; + e.getMessage());</span>
+<span class="nc" id="L125">        }</span>
+<span class="nc" id="L126">        logger.log(Level.INFO, &quot;-&gt; MESSAGE PUBLISHED: &quot; + message);</span>
+<span class="nc" id="L127">    }</span>
+    
+    public void sendMessage(String message) {
+        TextMessage textMessage;
+        try {
+<span class="nc" id="L132">            textMessage = session.createTextMessage(message);</span>
+<span class="nc" id="L133">            producer.send(textMessage);</span>
+<span class="nc" id="L134">        } catch (JMSException e) {</span>
+<span class="nc" id="L135">            logger.log(Level.SEVERE, &quot;Error sending message [&quot; + message + &quot;]! &quot; + e.getMessage());</span>
+<span class="nc" id="L136">        }</span>
+<span class="nc" id="L137">        logger.log(Level.INFO, &quot;-&gt; MESSAGE PUBLISHED: &quot; + message);</span>
+<span class="nc" id="L138">    }</span>
+    
+    public void disconnessione() throws JMSException {
+<span class="nc" id="L141">        producer.close();</span>
+<span class="nc" id="L142">        consumer.close();</span>
+<span class="nc" id="L143">        session.close();</span>
+<span class="nc" id="L144">        connection.stop();</span>
+<span class="nc" id="L145">        connection.close();</span>
+<span class="nc" id="L146">        logger.log(Level.SEVERE, &quot;Kaazing JMS has stopped&quot;);</span>
+<span class="nc" id="L147">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

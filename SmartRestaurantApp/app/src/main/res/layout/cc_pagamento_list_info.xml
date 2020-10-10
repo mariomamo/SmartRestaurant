@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor">
+
+    <LinearLayout
+        android:background="@color/primaryColor"
+        android:layout_above="@id/barra_prezzo"
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">s
+
+        <ListView
+            android:background="@color/primaryColor"
+            android:id="@+id/lv_piatti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:id="@+id/barra_prezzo"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_scritta_totale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Totale: "
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_toRightOf="@id/tv_scritta_totale"
+            android:id="@+id/tv_totale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30€"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/bt_azione"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordo_verde_state"
+            android:text="Segna come pagato"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/buttonSave" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_lenght_long">1000dp</dimen>
+    <dimen name="item_lenght_medium">500dp</dimen>
+    <dimen name="item_lenght_short">250dp</dimen>
+    <dimen name="btn_small">40dp</dimen>
+    <dimen name="title">20dp</dimen>
+</resources>

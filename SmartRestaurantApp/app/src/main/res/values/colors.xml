@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#f5f5f5</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryDarkColor">#c2c2c2</color>
+    <color name="secondaryColor">#42a5f5</color>
+    <color name="secondaryLightColor">#80d6ff</color>
+    <color name="secondaryDarkColor">#0077c2</color>
+    <color name="primaryTextColor">#707070</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="buttonSave">#4CAF50</color>
+    <color name="buttonCanc">#FF0000</color>
+</resources>

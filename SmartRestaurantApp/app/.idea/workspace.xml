@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="Nexus 10" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MY-DEBUG-jacoco" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf5f0681-bcf7-4f6c-9008-17aa2d5666df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/ExampleUnitTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/FragmentMatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/SuiteTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/ToastMatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/CCActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/ECActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/ECDishDetails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/LoginActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/PrActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/TvActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/TvActivityCallback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/TvDishDetails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/activity/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Comanda.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Notifica.Categoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Notifica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Piatto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/PiattoOrdinato.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/Tavolo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/entity/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginProprietario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1101.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1102.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1103.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1104.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1106.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1107.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LogoutTC1201.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LogoutTC1202.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LogoutTC1203.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/LogoutTC1204.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneaccount/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionemenu/VisualizzareMenuTC401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionemenu/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionemenu/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionemenu/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/CancellarePreparazionePiattoTC703.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/ConfermareIlPagamentoTC504.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/ConfermarePreparazionePiattoTC702.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/InserireUnPiattoTC3101.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/InserireUnPiattoTC3102.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/InserireUnPiattoTC3103.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/InserireUnPiattoTC3104.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/InviareOrdineInCucinaTC602.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/RichiedereIlPagamentoTC3201.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/RichiedereIlPagamentoTC3202.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/RimuoverePiattoDaOrdineTC601.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/VisualizzareLeComandeTC701.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestioneordini/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2101.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2102.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2103.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2104.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2106.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2107.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2108.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2109.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2110.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2111.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2112.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungereUnTavoloTC2113.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/AggiungiTavolo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/LiberaTavoloTC503.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2201.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2202.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2203.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2204.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2205.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2206.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2207.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2208.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2209.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2210.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/OccupaTavoloTC502.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/RimuoviTavolo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/VisualizzaNotificaTC505.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/gestionesala/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/CCNotificheAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/CustomAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/CustomAdapterPiatto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/ListaOrdiniAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/TvCartAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/TvCloseMealAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Adapter/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/CustomAdapterCustomAdapter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/CustomAdapterFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/CustomAdapterListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/CustomAdapterSingoloOrdine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/CCLeftMenuFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/CCPagamentoListInfoFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/CCTavoliFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/CCTavoliViewGenerale.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/CCTavoloNotificheFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/ECDishFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/ECLeftMenuFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/ECOrderFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/PRLeftMenuFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/PRViewFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/PagamentoCallback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/TvCartFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/TvCloseMealFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/TvDishFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/TvLeftMenuFragment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/Fragment/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/ListItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/TvCartAdapterListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/VisualizzatoreTavoliAstratto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/item/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/DbManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/DispatchQueue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/SmartRestaurantDispatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/server/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/ComandaService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/LoginServerListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/LoginService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/NotificaService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/PiattoService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/TavoloService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/it/unisa/smartrestaurantapp/service/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Client/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Comanda.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Notifica.Categoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Notifica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Piatto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/PiattoOrdinato.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/Tavolo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Comanda.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Notifica.Categoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Notifica.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Piatto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/PiattoOrdinato.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/class-use/Tavolo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/entity/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/GsonTester.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/SmartRestaurantDispatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/Starter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/class-use/GsonTester.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/class-use/SmartRestaurantDispatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/class-use/Starter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/netbeanskaazing/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/AccountQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/AccountQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/ComandaQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/ComandaQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/DbManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/DriverManagerConnectionPool.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/NotificaQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/NotificaQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/PiattoOrdinatoQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/PiattoOrdinatoQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/PiattoQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/PiattoQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/TavoloQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/TavoloQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/AccountQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/AccountQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/ComandaQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/ComandaQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/DbManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/DriverManagerConnectionPool.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/NotificaQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/NotificaQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/PiattoOrdinatoQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/PiattoOrdinatoQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/PiattoQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/PiattoQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/TavoloQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/class-use/TavoloQueryInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/query/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/Javadoc Server/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/ODD_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/PS_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/RAD_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/SDD_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/TER_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/TP_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documenti/TSR_SmartRestaurant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/activity/ECActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/activity/ECActivity.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="151" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="172.19.178.237:5555" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/..">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SmartRestaurantApp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SmartRestaurantApp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SmartRestaurantApp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SmartRestaurantApp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SmartRestaurantApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/CustomAdapterSingoloOrdine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="130" column="36" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/CustomAdapterFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="mariomamo &lt;45656028+mariomamo@users.noreply.github.com&gt;" />
+        <option value="mariomamo &lt;mariooffertucci@live.it&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/entity/PiattoOrdinatoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/entity/Tavolo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/entity/TavoloTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/activity/CCActivityTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/item/Adapter/CCNotificheAdapterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/entity/NotificaTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/DbManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/server/DbManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/server/DispatchQueueTest.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/AggiungiTavolo.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2102.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2103.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2104.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2105.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2106.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2107.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2108.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2109.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2110.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2111.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2101.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2113.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2112.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/liberazione/LiberaTavoloTC503.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2202.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2203.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2204.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2205.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2206.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2207.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2208.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2201.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/notifiche/VisualizzaNotificaTC505.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/occupazione/OccupaTavoloTC502.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2209.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2210.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/server/SmartRestaurantDispatcherTest.java" />
+        <option value="$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/RimuoviTavolo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/Jacoco.java" />
+        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/SmartRestaurantDispatcherMock.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/ComandaServiceMockup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/DispatchQueueMockup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/DispatchQueue.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/ComandaServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/service/ComandaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/SmartRestaurantDispatcher.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/activity/LoginActivityTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/activity/ECActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/CustomAdapterSingoloOrdine.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="254" />
+    <option name="y" value="-15" />
+    <option name="width" value="1026" />
+    <option name="height" value="541" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="Fragment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="gestioneaccount" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="smartrestaurantapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="SmartRestaurantApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_t580-192.168.1.198:5555" />
+    <property name="DEBUGGABLE_PROCESS" value="it.unisa.smartrestaurantapp" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_C_API_29" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-18T07:10:35.630Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Properties" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="it.unisa.smartrestaurantapp.activity" />
+      <recent name="it.unisa.smartrestaurantapp.service" />
+      <recent name="it.unisa.smartrestaurantapp.server" />
+      <recent name="it.unisa.smartrestaurantapp.item.Adapter" />
+      <recent name="it.unisa.smartrestaurantapp.entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.unisa.smartrestaurantapp.activity" />
+      <recent name="it.unisa.smartrestaurantapp" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MarioELT\Documents\GitHub\SmartRestaurant\SmartRestaurantApp\app\src\test\java\it\unisa\smartrestaurantapp" />
+      <recent name="C:\Users\MarioELT\Documents\GitHub\SmartRestaurant\SmartRestaurantApp\app\src\main\res\drawable" />
+      <recent name="$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/service" />
+      <recent name="$PROJECT_DIR$/src/main/res/drawable-v24" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="All in app" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="it.unisa.smartrestaurantapp.service in app" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unisa.smartrestaurantapp.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.unisa.smartrestaurantapp.service" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTC1101" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="androidx.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="it.unisa.smartrestaurantapp.gestioneaccount.LoginTC1101" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests in 'it.unisa.smartrestaurantapp.gestionesala_p2'" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app [connectedDebugAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="connectedDebugAndroidTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [createDebugCoverageReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="createDebugCoverageReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [deviceAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deviceAndroidTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android Instrumented Tests.Tests in 'it.unisa.smartrestaurantapp.gestionesala_p2'" />
+      <item itemvalue="Android Instrumented Tests.LoginTC1101" />
+      <item itemvalue="Android JUnit.it.unisa.smartrestaurantapp.service in app" />
+      <item itemvalue="Android JUnit.All in app" />
+      <item itemvalue="Gradle.app [createDebugCoverageReport]" />
+      <item itemvalue="Gradle.app [connectedDebugAndroidTest]" />
+      <item itemvalue="Gradle.app [deviceAndroidTest]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.All in app" />
+        <item itemvalue="Android JUnit.it.unisa.smartrestaurantapp.service in app" />
+        <item itemvalue="Gradle.app [deviceAndroidTest]" />
+        <item itemvalue="Gradle.app [connectedDebugAndroidTest]" />
+        <item itemvalue="Gradle.app [createDebugCoverageReport]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf5f0681-bcf7-4f6c-9008-17aa2d5666df" name="Default Changelist" comment="" />
+      <created>1580402584740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580402584740</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Aggiunta la classe Notifica per la gestione delle notifiche. Creato il frammento per la visualizzazione delle notifiche con il relativo adapter.">
+      <created>1580560656783</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580560656783</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Aggiunte le classi SmartRestaurantDispatcher che si occupa della connessione con il servizio JMS e DispatchQueue che gestisce una coda di lavori su thread separati.">
+      <created>1580562935275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580562935275</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Effettuato collegamento con il server. Per ora solamente per la classe AccountService.&#10;Aggiunta la classe LoginServerListener che si occupa di gestire i login corretti o errati.">
+      <created>1580913805701</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580913805702</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ComandaServiceTest - 2020.02.18 at 14h 26m 11s.xml">
+      <configuration name="ComandaServiceTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="ComandaServiceTest - 2020.02.18 at 14h 26m 23s.xml">
+      <configuration name="ComandaServiceTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="ComandaServiceTest - 2020.02.18 at 14h 31m 39s.xml">
+      <configuration name="ComandaServiceTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="ComandaServiceTest - 2020.02.18 at 14h 35m 28s.xml">
+      <configuration name="ComandaServiceTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginActivityTest - 2020.02.18 at 14h 48m 07s.xml">
+      <configuration name="LoginActivityTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginActivityTest - 2020.02.18 at 14h 48m 15s.xml">
+      <configuration name="LoginActivityTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginActivityTest - 2020.02.18 at 14h 48m 36s.xml">
+      <configuration name="LoginActivityTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="LoginTC1101 - 2020.02.18 at 14h 52m 45s.xml">
+      <configuration name="LoginTC1101" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="it_unisa_smartrestaurantapp_service_in_app - 2020.02.18 at 15h 15m 55s.xml">
+      <configuration name="it.unisa.smartrestaurantapp.service in app" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="All_in_app - 2020.02.18 at 15h 16m 23s.xml">
+      <configuration name="All in app" configurationId="AndroidJUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Captures" order="0" sideWeight="0.50140846" side_tool="true" weight="0.16364606" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49847096" visible="true" weight="0.24130106" />
+      <window_info id="Structure" order="2" sideWeight="0.50140846" side_tool="true" weight="0.16364606" />
+      <window_info id="Favorites" order="3" sideWeight="0.50140846" side_tool="true" weight="0.16364606" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Build Variants" order="8" sideWeight="0.50152904" side_tool="true" weight="0.16364606" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4989339" weight="0.41080198" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.41898528" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32954547" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010661" side_tool="true" weight="0.29144096" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.16468039" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49924242" visible="true" weight="0.39934534" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32569557" />
+      <window_info anchor="right" id="Device File Explorer" order="0" sideWeight="0.42535213" side_tool="true" weight="0.31164902" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" sideWeight="0.55135137" weight="0.31164902" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.34871408" />
+      <window_info anchor="right" id="Android WiFi ADB" order="6" sideWeight="0.5361111" weight="0.31316188" />
+      <window_info anchor="right" id="Coverage" order="7" sideWeight="0.44864866" side_tool="true" weight="0.31164902" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aggiunta la classe Notifica per la gestione delle notifiche.&#10;Creato il frammento per la visualizzazione delle notifiche con il relativo adapter." />
+    <MESSAGE value="Aggiunta la classe Notifica per la gestione delle notifiche. Creato il frammento per la visualizzazione delle notifiche con il relativo adapter." />
+    <MESSAGE value="Aggiunte le classi SmartRestaurantDispatcher che si occupa della connessione con il servizio JMS e DispatchQueue che gestisce una coda di lavori su thread separati." />
+    <MESSAGE value="Effettuato collegamento con il server. Per ora solamente per la classe AccountService.&#10;Aggiunta la classe LoginServerListener che si occupa di gestire i login corretti o errati." />
+    <option name="LAST_COMMIT_MESSAGE" value="Effettuato collegamento con il server. Per ora solamente per la classe AccountService.&#10;Aggiunta la classe LoginServerListener che si occupa di gestire i login corretti o errati." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__testDebugUnitTest_.ic" NAME="app [testDebugUnitTest] Coverage Results" MODIFIED="1582034647685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__jacocoTestReport_.ic" NAME="app [jacocoTestReport] Coverage Results" MODIFIED="1582023607834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__compileDebugAndroidTestSources_.ic" NAME="app [compileDebugAndroidTestSources] Coverage Results" MODIFIED="1582034441712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$ComandaServiceTest.ic" NAME="ComandaServiceTest Coverage Results" MODIFIED="1582032926100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__connectedDebugAndroidTest_.ic" NAME="app [connectedDebugAndroidTest] Coverage Results" MODIFIED="1582034749853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1581984123784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__test_.ic" NAME="app [test] Coverage Results" MODIFIED="1581984224380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__connectedCheck_.ic" NAME="app [connectedCheck] Coverage Results" MODIFIED="1581969749820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$PiattoOrdinatoTest.ic" NAME="PiattoOrdinatoTest Coverage Results" MODIFIED="1581981509674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$TavoloTest.ic" NAME="TavoloTest Coverage Results" MODIFIED="1581982580723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$it_unisa_smartrestaurantapp_entity_in_app.ic" NAME="it.unisa.smartrestaurantapp.entity in app Coverage Results" MODIFIED="1582017824289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$it_unisa_smartrestaurantapp_service_in_app.ic" NAME="it.unisa.smartrestaurantapp.service in app Coverage Results" MODIFIED="1582035352662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__createDebugCoverageReport_.ic" NAME="app [createDebugCoverageReport] Coverage Results" MODIFIED="1582034709820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$NotificaTest.ic" NAME="NotificaTest Coverage Results" MODIFIED="1581981939294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$CCNotificheAdapterTest.ic" NAME="CCNotificheAdapterTest Coverage Results" MODIFIED="1581982870081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.item.Adapter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__compileDebugUnitTestSources_.ic" NAME="app [compileDebugUnitTestSources] Coverage Results" MODIFIED="1582034426130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$LoginActivityTest.ic" NAME="LoginActivityTest Coverage Results" MODIFIED="1582033714157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.activity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__deviceAndroidTest_.ic" NAME="app [deviceAndroidTest] Coverage Results" MODIFIED="1582034792530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$ComandaTest.ic" NAME="ComandaTest Coverage Results" MODIFIED="1581980646289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$SuiteTest.ic" NAME="SuiteTest Coverage Results" MODIFIED="1581970795275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$app__jacocoDebug_.ic" NAME="app [jacocoDebug] Coverage Results" MODIFIED="1582022523858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$All_in_app.ic" NAME="All in app Coverage Results" MODIFIED="1582035380058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$it_unisa_smartrestaurantapp_activity_in_app.ic" NAME="it.unisa.smartrestaurantapp.activity in app Coverage Results" MODIFIED="1581969396081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.activity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$DbManagerTest.ic" NAME="DbManagerTest Coverage Results" MODIFIED="1582011872124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.server.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$entity_in_app.ic" NAME="entity in app Coverage Results" MODIFIED="1581984135462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$smartrestaurantapp_in_app.ic" NAME="smartrestaurantapp in app Coverage Results" MODIFIED="1582017796536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$CCActivityTest.ic" NAME="CCActivityTest Coverage Results" MODIFIED="1581982722319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.activity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$SmartRestaurantDispatcherTest.ic" NAME="SmartRestaurantDispatcherTest Coverage Results" MODIFIED="1582016202917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.server.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SmartRestaurantApp$PiattoTest.ic" NAME="PiattoTest Coverage Results" MODIFIED="1581981199325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unisa.smartrestaurantapp.entity.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2113.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2111.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2202.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2203.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2204.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2205.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2206.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2207.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2208.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/liberazione/LiberaTavoloTC503.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/aggiunta/AggiungereUnTavoloTC2112.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/notifiche/VisualizzaNotificaTC505.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/occupazione/OccupaTavoloTC502.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2201.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2209.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/modifca/ModificareUnTavoloTC2210.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/AggiungiTavolo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/server/SmartRestaurantDispatcherTest.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#1464#1658#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/ModificareUnTavoloTC2210.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="63" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/service/TavoloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/Jacoco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/DbManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionesala/RimuoviTavolo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestionemenu/VisualizzareMenuTC401.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/entity/ComandaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/entity/Notifica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/SmartRestaurantDispatcherMockup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/DispatchQueueMockup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/ComandaServiceMockup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/DispatchQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/service/ComandaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/server/SmartRestaurantDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/service/ComandaServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/unisa/smartrestaurantapp/activity/LoginActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/it/unisa/smartrestaurantapp/gestioneaccount/LoginTC1101.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/reports/tests/testDebugUnitTest/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/activity/ECActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/list_item_listview.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/Fragment/TvCartFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1653">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/Adapter/TvCartAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1096">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/Fragment/ECLeftMenuFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1156">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/Fragment/ECOrderFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="169" column="38" lean-forward="true" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/CustomAdapterSingoloOrdine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="130" column="36" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unisa/smartrestaurantapp/item/CustomAdapterFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

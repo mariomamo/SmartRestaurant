@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_piatto_ordinato"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:paddingTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_nome_piatto_ordine"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/title"
+            android:text="Nome piatto ordinato"/>
+
+        <Button
+            android:id="@+id/btn_positive"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bordo_verde_state"
+            android:text="v"
+            android:textSize="15dp"
+            android:textColor="@color/buttonSave"/>
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bordo_rosso_state"
+            android:text="x"
+            android:textSize="15dp"
+            android:textColor="@color/buttonCanc"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_note_piatto_ordine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="note piatto ordinato"/>
+
+
+</LinearLayout>

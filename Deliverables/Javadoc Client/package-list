@@ -1,0 +1,12 @@
+it.unisa.smartrestaurantapp
+it.unisa.smartrestaurantapp.activity
+it.unisa.smartrestaurantapp.entity
+it.unisa.smartrestaurantapp.gestioneaccount
+it.unisa.smartrestaurantapp.gestionemenu
+it.unisa.smartrestaurantapp.gestioneordini
+it.unisa.smartrestaurantapp.gestionesala
+it.unisa.smartrestaurantapp.item
+it.unisa.smartrestaurantapp.item.Adapter
+it.unisa.smartrestaurantapp.item.Fragment
+it.unisa.smartrestaurantapp.server
+it.unisa.smartrestaurantapp.service

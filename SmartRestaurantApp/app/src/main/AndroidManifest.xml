@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.unisa.smartrestaurantapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.LoginActivity"
+                  android:screenOrientation="sensorLandscape"
+                  android:windowSoftInputMode="stateVisible|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CCActivity"
+            android:label="PrGestSalaActivity"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name=".activity.TvActivity"
+            android:label="TvMenuActivity"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name=".activity.PrActivity"
+            android:label="TvMenuActivity"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name=".activity.ECActivity"
+            android:label="ECActivity"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:name=".activity.TvDishDetails"
+            android:label=""
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:name=".activity.ECDishDetails"
+            android:label=""
+            android:screenOrientation="behind">
+        </activity>
+    </application>
+
+</manifest>
